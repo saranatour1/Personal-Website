@@ -1,0 +1,5 @@
+*.pdf
+*.txt
+/Three js
+/node_modules
+/Portfolio_past
