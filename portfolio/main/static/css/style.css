@@ -22,7 +22,7 @@ body {
 
   --btn-bg: #120502;
   --btn-txt: #ffe09d;
-  --card-bg:#fff6e169;
+  --card-bg: #fff6e169;
 }
 
 /* nav bar start */
@@ -67,9 +67,8 @@ p.blockquote.text-muted.text-wrap.w-90 {
   text-overflow: clip;
   line-height: 1.5 !important;
   hyphens: auto;
-  word-break:keep-all;
-text-align: justify;
-
+  word-break: keep-all;
+  text-align: justify;
 }
 
 button.btn.btn-primary.rounded-pill.px-3.py-2 {
@@ -100,21 +99,20 @@ h2.text-center.my-3 {
   letter-spacing: 1px;
 }
 
-p.text-start.p-3.blockquote{
+p.text-start.p-3.blockquote,
+p {
   color: var(--h1-color) !important;
   text-overflow: clip;
   line-height: 1.5 !important;
   hyphens: auto;
-  word-break:keep-all;
+  word-break: keep-all;
   text-align: justify;
-
 }
-hr{
+hr {
   color: var(--btn-bg);
-
 }
 
-h3.text-center{
+h3.text-center {
   text-transform: capitalize;
   font-size: 33px;
   font-weight: 700;
@@ -122,11 +120,11 @@ h3.text-center{
   letter-spacing: 1px;
 }
 
-div.card{
+div.card {
   background-color: var(--card-bg);
 }
 
-h4.text-center.my-3{
+h4.text-center.my-3 {
   text-transform: capitalize;
   font-size: 25px;
   font-weight: 700;
@@ -134,11 +132,46 @@ h4.text-center.my-3{
   letter-spacing: 1px;
 }
 
-p.text-muted{
+p.text-muted {
   color: var(--h1-color) !important;
   text-overflow: clip;
   line-height: 1.5 !important;
   hyphens: auto;
   /* word-break:break-all; */
   text-align: justify !important;
+}
+
+a.btn.btn-link.btn-lg {
+  color: var(--h1-color);
+  font-size: 70px;
+}
+p.text-center.x {
+  color: var(--h1-color);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h5 {
+  text-transform: capitalize !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: var(--h1-color) !important;
+  letter-spacing: -1px !important;
+}
+
+li.nav-link.p-0.text-muted {
+  color: var(--muted-text) !important;
+  text-overflow: clip;
+  line-height: 1.5 !important;
+
+}
+
+p.p-3.blockquote.w-90.text-center.mx-auto.my-1{
+ 
+  color: var(--links-on-hover) !important;
+  text-overflow: clip;
+  line-height: 2.5 !important;
+  hyphens: auto;
+  word-break: keep-all;
+  text-align: justify;
 }

@@ -5,6 +5,7 @@ from django.shortcuts import render
 # Main page to render the main template 
 
 # For now I have nothing to store in a database
+# Basic main page functionality, no overdone things
 def main(request):
   # print(request) #<WSGIRequest: GET '/'>
   return render(request,'main.html')
