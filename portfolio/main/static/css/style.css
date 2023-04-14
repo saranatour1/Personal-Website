@@ -176,7 +176,7 @@ li.nav-link.p-0.text-muted {
 
 }
 
-p.p-3.blockquote.w-90.text-center.mx-auto.my-1{
+p.p-3.blockquote.w-90.text-center.mx-auto.my-1 ,a.blockquote{
  
   color: var(--links-on-hover) !important;
   text-overflow: clip;

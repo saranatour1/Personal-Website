@@ -26,7 +26,16 @@ def contact_me(request):
 
 # blog page @ /blog /keep the blogs here?
 def blog(request):
-  return render(request,'blogs.html')
+    return render(request,'blogs.html')
+
+
+def blogs(request,blognum):
+  if blognum == 1:
+    return render(request,'blog1.html')
+  elif blognum == 2:
+    return render(request,'blog2.html')
+  elif blognum == 3:
+    return render(request,'blog3.html')
 
 # Motivitational quotes @quotes
 def quote(request):

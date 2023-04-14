@@ -8,6 +8,7 @@ urlpatterns = [
     path('contact',views.contact_me), #contactme at route /contact
     path('about',views.about_me), #aboutme at route /about
     path('blog',views.blog),
+    path('blog/<int:blognum>',views.blogs),
     path('quote',views.quote),
     path('gallery',views.gallery), 
 ]
