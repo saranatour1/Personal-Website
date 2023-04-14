@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@200;400;900&display=swap');
+
+*{
+  font-family: 'Source Serif Pro', serif;
+}
+
+:root{
+  --nav-bar:#FFE9CE;
+  --links:#1A0E08;
+  --links-on-hover:#392A23;
+  --nav-btn:#DCDDDF;
+
+}
+
+.navbar{
+  background-color: var(--nav-bar);
+
+}
+.nav-link{
+  color: var(--links) !important;
+}
+.nav-link:hover{
+  /* filter: brightness(140%) !important; */
+  color: var(--links-on-hover) !important;
+
+}
+
+.navbar-toggler{
+  color: var(--links);
+  border: 1px solid #DCDDDF;
+  
+}
