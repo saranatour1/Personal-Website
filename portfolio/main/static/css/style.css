@@ -190,7 +190,7 @@ p.mb-0{
   line-height: 2.4 !important;
 
 }
-.btn.btn-lg.btn-primary.rounded-pill.px-3.py-5.d-flex.align-items-center.flex-column{
+.btn.btn-lg.btn-primary.rounded-pill.px-5.py-2.d-flex.align-items-center{
   background-color: var(--h1-color) !important;
   color: var(--btn-txt) !important;
   cursor: pointer;
