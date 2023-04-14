@@ -13,14 +13,16 @@ def main(request):
 
 # Contact me route, remember to add form information here? use mailchimp
 
-def contact_me(request):
-
-  return render(request,'contactme.html') 
-
-
 # About me  route @ /about
 def about_me(request):
   return render(request,'aboutme.html') 
+
+# Contact me
+def contact_me(request):
+  return render(request,'contactme.html') 
+
+
+
 
 # blog page @ /blog /keep the blogs here?
 def blog(request):
@@ -34,3 +36,8 @@ def quote(request):
 
 def gallery(request):
   return render(request,'gallery.html')
+
+
+
+
+# Add a story time line, one user 'per ip address per story' can watch a story

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About me page | Sara's code corner </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  {% load static %}
+  <link rel="shortcut icon" href="{% static 'assets/favicon.png' %}" type="image/x-icon">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+  <!-- the main website template, will be updated in jQuery later -->
+  <div class="container-fluid mx-auto">
+    <nav class="navbar sticky-top navbar-expand-lg py-2">
+      <div class="container container-sm container-md container-lg d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center">
+          {% load static %}
+          <a class="navbar-brand" href="/"> <img src="{% static 'assets/logo.svg' %}" alt="Sara's Coding Corner logo"></a>
+        </div>
+        <!-- Mobile Navbar Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="order: 1;">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link " aria-current="page" href="/">Home</a>
+            <a class="nav-link active" href="/about">About me </a>
+            <a class="nav-link" href="/projects">Projects</a>
+            <a class="nav-link " href="/contact">Contact me</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container container-sm container-md container-lg container-xl mt-5">
+      <div class="row">
+        <h2 class="text-center my-3">
+          About me
+        </h2>
+        <hr class="w-25 mx-auto">
+
+        <div class="row">
+          <div class="col-12 col-md-12 col-sm-12 col-lg-6">
+            <p class="p-3 blockquote w-90 text-center mx-auto my-1">
+              Hey fellows! <br>
+              My name is Sara and I'm from Palestine. I was born and raised here - in case you're interested. I was born on April 28th, 1999. The picture on the side is me at 4 years old. I remember my dad had his first ever computer and he was working on Excel back when it was simple and plain. I wish I had more context for this picture, but I have no memory of it. I might even have my age wrong, lol. I like to show this picture because I really believe I've been a nerd since birth.
+            </p>
+          </div>
+          <div class="col-12 col-md-12 col-sm-12 col-lg-6">
+            <figure class="mx-auto text-center">
+              <img src="{% static 'assets/4_year_old_me.jpeg' %}" alt="Sara at 4 years old" class="img-fluid">
+              <figcaption class="text-muted">Sara at 4 years old</figcaption>
+            </figure>
+          </div>
+<!-- nerd defenetion -->
+
+<figure class="text-center w-50 my-4 mx-auto">
+  <blockquote class="blockquote">
+    <p style="text-indent: 1em !important;">a "nerd" is typically described as someone who is highly knowledgeable and enthusiastic about a specific intellectual or technical subject, often associated with STEM fields or other unconventional interests. They may have traits such as intelligence, curiosity, and a passion for learning, and may prefer spending time alone or with like-minded individuals.
+    </p>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    by <cite title="Source Title">ChatGPT</cite>
+  </figcaption>
+</figure>
+
+
+
+        </div>
+
+        <div class="container container-sm container-md container-lg container-xl mt-5">
+          <h2 class="text-center my-3">
+            Background
+          </h2>
+          <hr class="w-25 mx-auto">
+          <p class="blockquote">
+            I can list a lot of personal information if I could, BUT that would be too much for me. Here is my 'Professional story' in lists.
+            <strong class="text-muted">Sarcasm is my number one trait</strong>
+          </p>
+
+            <h4 class="text-center my-3">Notes on My Life</h4>
+            <hr class="w-25 mx-auto ">
+
+
+            <div class="row">
+              <div class="col-6">
+                <ul>
+                  <ul>
+                    <li class="text-wrap w-90 text-start blockquote">I was born and raised in the small city of Tulkarem, <span class="text-muted">(32.3194° N, 35.0240° E)</span>. I had a childhood like everyone else, and at the age of 15, I moved to Riyadh, Saudi Arabia for two years.</li>
+                    <li class="text-wrap w-90 text-start blockquote">In Riyadh , <span class="text-muted">(24.7136° N, 46.6753° E)</span> we lived in a quiet neighborhood, and life was good. I used to skip school to go to Tim Hortons for coffee on a weekly basis. After that, I graduated and returned home. </li>
+                    <li class="text-wrap w-90 text-start blockquote">I have lived and visited the UAE multiple times as well, <span class="text-muted">(24.4539° N, 54.3773° E)</span> </li>
+                    <li class="text-wrap w-90 text-start blockquote">I studied Electrical Engineering at a university and graduated in 2022.</li>
+                    <li class="text-wrap w-90 text-start blockquote">During those 5 years, I gained a lot of experience working with different engineering software, such as AutoCAD, Matlab, PVsyst, etc.</li>
+                    <li class="text-wrap w-90 text-start blockquote">I developed a strong interest in our environment, sustainability, and sustainable ways to generate power.</li>
+                    <li class="text-wrap w-90 text-start blockquote">My graduation project was on Hydroponics, titled "Design of a Plant Growing and Monitoring System". It was such an interesting topic.</li>
+                    <li class="text-wrap w-90 text-start blockquote">After graduation, I did an internship with a startup company that develops electronic systems for water cost reduction purposes.</li>
+                    <li class="text-wrap w-90 text-start blockquote">Then, I started looking for jobs here and there, but was not successful.</li>
+                    <li class="text-wrap w-90 text-start blockquote">During that time, I revisited my research on Full Stack Development and decided to take action and start working on my skills in this field.</li>
+                    <li class="text-wrap w-90 text-start blockquote"> I have a Full Gallery full of sunset and sunrise Pictures , Check it out :D </li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="col-6 d-flex align-items-center">
+                <div class="mx-auto">
+                  <a href="/gallery">
+                    <button class="btn btn-lg btn-primary rounded-pill px-3 py-5 d-flex align-items-center flex-column">
+                      <i class="bi bi-images"></i>
+                      <br>
+                      <i class="bi bi-box-arrow-up-right "></i>
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+
+
+        </div>
+
+        
+
+  
+        <hr class="w-25 mx-auto my-5 ">
+        <h3 class="text-center mb-4">What I'm currently Learning and working with</h3>
+        <hr class="w-25 mx-auto ">
+        <blockquote class="blockquote">
+          <p class="mb-0">
+            I am a student at the Coding Dojo Academy, where I am learning 3 stacks (Python, Java, React) and how to code 
+            and solve algorithms along with 11 other students. My advice to you if you are planning to do this: 
+            <strong>have a good plan</strong> and research about it before attending. Follow what you love and not what everyone is doing. 
+            If you have passion and curiosity for websites and software, and you have the time, I highly recommend Coding Dojo. 
+            Their material is rich with information, but the only issue is with time. <strong>Manage your time</strong> and ask for help whenever you need it. 
+            Keep it civil. I did a year of research before making my decision. It's never too late.
+          </p>
+          <p class="ps-5 text-muted my-3"> You can Check out My readme on Github to see the things that I'm working with. </p>
+        </blockquote>
+
+        <div class="card mx-auto w-50 rounded-3 shadow p-3 mb-5 rounded">
+          <div class="card-body d-flex justify-content-center align-items-center flex-wrap p-4">
+            <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="python logo" class="img-fluid p-2" >
+            <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5 logo" class="img-fluid p-2">
+            <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript logo" class="img-fluid p-2">
+            <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css3" class="img-fluid p-2">
+            <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green" alt="django" class="img-fluid p-2">
+            <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="flask" class="img-fluid p-2">
+            <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" alt="bootstrap" class="img-fluid p-2">
+            <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" class="img-fluid p-2">
+            <img src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white" alt="java" class="img-fluid p-2">
+            <img src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot" alt="spring boot" class="img-fluid p-2">
+            <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" class="img-fluid p-2">
+            <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="git" class="img-fluid p-2">
+            <span>....</span> <br>
+
+          </div>
+          <div class="text-center mx-auto">            
+            <a href="https://github.com/saranatour1" target="_blank"> <button class="btn btn-lg btn-primary rounded-pill px-3 py-2 w-100  "> <i class="bi bi-github"></i> <i class="bi bi-box-arrow-up-right ps-3"></i></button></a>
+          </div>
+        </div>
+      </div>
+
+     
+    </div>
+    <!-- footer -->
+    <!-- <div class="container-fluid">
+      <img src="{% static 'assets/footer.svg' %}" alt="wavy footer">
+    </div> -->
+
+   
+    <div class="container">
+      <hr>
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5">
+        <div class="col mb-3">
+          <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <img src="{% static 'assets/logo.svg' %}" alt="Sara's Coding Corner logo">
+          </a>
+          <p class="text-muted">All rights reserved &copy; 2023</p>
+        </div>
+    
+        <div class="col mb-3">
+    
+        </div>
+    
+        <div class="col mb-3">
+          <h5 class="">Main </h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="/" class="nav-link p-0 text-muted">Home</a></li>
+            <li class="nav-item mb-2"><a href="/about" class="nav-link p-0 text-muted">About me </a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Projcts</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <h5>Read my work</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Bookmarks</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Motivational Quotes I tell myself</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Photo Gallery</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

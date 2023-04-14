@@ -175,3 +175,26 @@ p.p-3.blockquote.w-90.text-center.mx-auto.my-1{
   word-break: keep-all;
   text-align: justify;
 }
+
+.text-wrap.w-90.text-start.blockquote{
+  color: var(--h1-color) !important;
+  text-overflow: clip;
+  line-height: 1.8 !important;
+}
+
+p.mb-0{
+
+  text-indent: 1em !important;
+  margin-top: 0;
+  margin-bottom: 0; 
+  line-height: 2.4 !important;
+
+}
+.btn.btn-lg.btn-primary.rounded-pill.px-3.py-5.d-flex.align-items-center.flex-column{
+  background-color: var(--h1-color) !important;
+  color: var(--btn-txt) !important;
+  cursor: pointer;
+  font-size: 16px !important;
+  text-transform: capitalize;
+  text-align: center;
+}
