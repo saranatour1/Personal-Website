@@ -8,9 +8,10 @@ I have a very great visual memory. I am not artistic myself, but I love to be in
 
 I feel colors. does that make sense? a while ago I had a dream about Moods and colors and it made me want to know more about feelings and colors, and it became interesting. I took some pictures of all the things I use Every day, from my laptop, to my desk, to almost everything I own, and I came up with this list using Figma, and used this tool to extract the colors  [image-picker](https://coolors.co/image-picker): 
 
+![colors](https://user-images.githubusercontent.com/77834808/232171334-53fc3f5e-17c6-4b50-9f70-d84c6d7f1377.svg)
 
 
-![colors](https://user-images.githubusercontent.com/77834808/232166966-9ada5430-d73b-4b39-b666-8e71e3109346.svg)
+
 
 
 You’ll most likely see parts of them on my page **Hopefully,**   and I have a Huge interest in seeing how this goes since I am awful at choosing the right colors.
