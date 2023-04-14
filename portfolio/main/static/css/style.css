@@ -78,6 +78,7 @@ button.btn.btn-primary.rounded-pill.px-3.py-2 {
   font-size: 16px !important;
   text-transform: capitalize;
   text-align: center;
+  border: 1px solid #1a0e08;
 }
 
 button:hover {
@@ -112,7 +113,7 @@ hr {
   color: var(--btn-bg);
 }
 
-h3.text-center {
+h3.text-center ,.text-center.my-2 {
   text-transform: capitalize;
   font-size: 33px;
   font-weight: 700;
@@ -120,8 +121,17 @@ h3.text-center {
   letter-spacing: 1px;
 }
 
-div.card {
+.card {
   background-color: var(--card-bg);
+  color: var(--h1-color);
+}
+
+.form-control,input{
+  background-color: var(--background-color);
+}
+
+input:focus{
+  background-color: var(--background-color) !important;
 }
 
 h4.text-center.my-3 {
@@ -141,7 +151,7 @@ p.text-muted {
   text-align: justify !important;
 }
 
-a.btn.btn-link.btn-lg {
+a.btn.btn-link.btn-lg  {
   color: var(--h1-color);
   font-size: 70px;
 }
@@ -190,7 +200,7 @@ p.mb-0{
   line-height: 2.4 !important;
 
 }
-.btn.btn-lg.btn-primary.rounded-pill.px-5.py-2.d-flex.align-items-center{
+.btn.btn-lg.btn-primary.rounded-pill.px-5.py-2.d-flex.align-items-center ,.btn.btn-primary {
   background-color: var(--h1-color) !important;
   color: var(--btn-txt) !important;
   cursor: pointer;
