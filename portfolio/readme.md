@@ -10,7 +10,7 @@ I feel colors. does that make sense? a while ago I had a dream about Moods and c
 
 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/![colors](https://user-images.githubusercontent.com/77834808/232166966-9ada5430-d73b-4b39-b666-8e71e3109346.svg)
+![colors](https://user-images.githubusercontent.com/77834808/232166966-9ada5430-d73b-4b39-b666-8e71e3109346.svg)
 
 
 You’ll most likely see parts of them on my page **Hopefully,**   and I have a Huge interest in seeing how this goes since I am awful at choosing the right colors.
