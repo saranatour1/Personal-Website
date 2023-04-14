@@ -208,3 +208,43 @@ p.mb-0{
   text-transform: capitalize;
   text-align: center;
 }
+
+pre code {
+  display: block;
+  padding: 1em;
+  background-color: #f5f5f5a3;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  overflow-x: auto;
+}
+
+
+.callout {
+  display: flex;
+  background-color: #f5f5f5a3; /* Replace with desired background color */
+  border: 1px solid #dee2e6; /* Replace with desired border color */
+  border-radius: 4px; /* Replace with desired border radius */
+  padding: 16px; /* Replace with desired padding */
+  margin-bottom: 16px; /* Replace with desired margin */
+}
+
+.callout-icon {
+  flex-shrink: 0;
+  margin-right: 16px; /* Replace with desired margin */
+}
+
+.callout-content {
+  flex-grow: 1;
+}
+
+.callout-title {
+  font-size: 18px; /* Replace with desired font size */
+  margin: 0 0 8px; /* Replace with desired margin */
+}
+
+.callout-text {
+  font-size: 14px; /* Replace with desired font size */
+  margin: 0; /* Replace with desired margin */
+}
