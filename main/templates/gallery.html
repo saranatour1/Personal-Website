@@ -26,7 +26,7 @@
   <body>
     <!-- the main website template, will be updated in jQuery later -->
     <div class="container-fluid mx-auto">
-      <nav class="navbar sticky-top navbar-expand-lg py-2">
+      <nav class="navbar  navbar-expand-lg py-2">
         <div
           class="container container-sm container-md container-lg d-flex align-items-center justify-content-between"
         >
@@ -74,9 +74,30 @@
         <small class="text-muted my-4">No specific dates, from 2013-2023 </small>
         <h2 class="text-center my-3">Gallery</h2>
         <hr class="w-25 mx-auto" />
+      </div>
+        <div class="container-fluid mx-auto">
+     
+          <div class="row " >
+            {% for img in imgs %}
+            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 gy-1 gx-1 ">
+              <img src="{{img}}" alt="sunset" class="img-fluid rounded" loading="lazy">
+            </div>
+            {% endfor %}
+          </div>
+
+
+
+
+
+        </div>
+
+
+
+
+
 
         <!-- <img src="{% static 'assets/colors.svg' %}" class="w-50" alt="My color pallette"> -->
-      </div>
+
       <div class="container">
         <hr />
         <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5">

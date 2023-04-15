@@ -248,3 +248,23 @@ pre code {
   font-size: 14px; /* Replace with desired font size */
   margin: 0; /* Replace with desired margin */
 }
+
+
+img.img-fluid.rounded:hover{
+  transform: scale(1.1) !important;
+  
+}
+
+body::-webkit-scrollbar {
+  width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #ffe9ce;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #2a1407;    /* color of the scroll thumb */
+  border-radius: 15px;       /* roundness of the scroll thumb */
+  border: 3px solid #392a23;  /* creates padding around scroll thumb */
+}
