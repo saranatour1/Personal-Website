@@ -17,3 +17,6 @@ dotenv.read_dotenv(os.path.join(os.path.dirname(os.path.dirname(__file__)), '.en
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'portfolio.settings')
 
 application = get_wsgi_application()
+
+# vercel_app/wsgi.py
+app = get_wsgi_application()

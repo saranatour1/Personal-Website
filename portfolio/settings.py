@@ -25,7 +25,7 @@ SECRET_KEY = 'b9ynw08l3bx#y)hzp4_5dx07$h-@0a8@^%s7t_$oo2baku^89r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','localhost','.vercel.app']
 
 
 # Application definition
@@ -115,7 +115,12 @@ USE_L10N = True
 USE_TZ = True
 
 
+# vercel_app/settings.py
+WSGI_APPLICATION = 'portfolio.wsgi.app'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
