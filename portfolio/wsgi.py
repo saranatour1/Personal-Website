@@ -19,4 +19,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'portfolio.settings')
 application = get_wsgi_application()
 
 # vercel_app/wsgi.py
-app = get_wsgi_application()
+app = application
