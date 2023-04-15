@@ -24,9 +24,9 @@ By the time you are seeing this, 17/04/2023, the framework I used is Django,  wi
 
 ```bash
 
-You are here  
-|
-|
-|-->Django--> ?
+  You are here  
+  |
+  |
+  └──── Django ───> ?
 
 ```

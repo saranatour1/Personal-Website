@@ -4,6 +4,10 @@ from django.shortcuts import render
 
 # Main page to render the main template 
 
+
+
+
+
 # For now I have nothing to store in a database
 # Basic main page functionality, no overdone things
 def main(request):
@@ -41,12 +45,16 @@ def blogs(request,blognum):
 def quote(request):
   return render(request,'quote.html')
 
-# @gallery
+# @gallery  ,using Google cloud storage api 
 
 def gallery(request):
+
+
   return render(request,'gallery.html')
 
 
 
 
 # Add a story time line, one user 'per ip address per story' can watch a story
+
+#under construction error 404
