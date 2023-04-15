@@ -1,2 +1,5 @@
 old/
 *.env
+
+node_modules/
+.vercel

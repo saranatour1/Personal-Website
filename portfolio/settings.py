@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -102,6 +103,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+STORAGES = {
+    # ...
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
@@ -125,7 +133,11 @@ WSGI_APPLICATION = 'portfolio.wsgi.app'
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, "static/")	
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")	
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
+if os.environ.get("VERCEL"):
+    
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")	
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
