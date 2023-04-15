@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery | Sara's code corner</title>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
@@ -25,12 +25,19 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
-    <a href="https://github.com/saranatour1/Personal-Website.git" target="_blank" id="fork-corner" class="fork-corner fc-size-small fc-pos-tl fc-animate-grow fc-theme-github">    <i class="bi bi-github ix"></i></a>
+    <a
+      href="https://github.com/saranatour1/Personal-Website.git"
+      target="_blank"
+      id="fork-corner"
+      class="fork-corner fc-size-small fc-pos-tl fc-animate-grow fc-theme-github"
+    >
+      <i class="bi bi-github ix"></i
+    ></a>
     <div></div>
 
     <!-- the main website template, will be updated in jQuery later -->
     <div class="container-fluid mx-auto">
-      <nav class="navbar  navbar-expand-lg py-2">
+      <nav class="navbar navbar-expand-lg py-2">
         <div
           class="container container-sm container-md container-lg d-flex align-items-center justify-content-between"
         >
@@ -75,22 +82,29 @@
       </nav>
 
       <div class="container containe-sm container-md container-lg">
-        <small class="text-muted my-4">No specific dates, from 2013-2023 </small>
+        <small class="text-muted my-4"
+          >No specific dates, from 2013-2023
+        </small>
         <h2 class="text-center my-3">Gallery</h2>
         <hr class="w-25 mx-auto" />
       </div>
-        <div class="container-fluid mx-auto">
-     
-          <div class="row " >
-            {% for img in imgs %}
-            <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 gy-1 gx-1 " >
-              <img src="{{img}}" alt="sunset" class="img-fluid rounded" loading="lazy" data-aos="fade-up">
-            </div>
-            {% endfor %}
+      <div class="container-fluid mx-auto">
+        <div class="row">
+          {% for img in imgs %}
+          <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 gy-1 gx-1">
+            <img
+              src="{{img}}"
+              alt="sunset"
+              class="img-fluid rounded"
+              loading="lazy"
+              data-aos="fade-up"
+            />
           </div>
+          {% endfor %}
         </div>
+      </div>
 
-        <!-- <img src="{% static 'assets/colors.svg' %}" class="w-50" alt="My color pallette"> -->
+      <!-- <img src="{% static 'assets/colors.svg' %}" class="w-50" alt="My color pallette"> -->
 
       <div class="container">
         <hr />
@@ -161,15 +175,12 @@
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init(
-        {
-      delay:200,
-      duration:1500,
-      once:false,
-      mirror:false,
-
-        }
-      );
+      AOS.init({
+        delay: 200,
+        duration: 1500,
+        once: false,
+        mirror: false,
+      });
     </script>
 
     <script
