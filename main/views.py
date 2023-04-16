@@ -14,6 +14,8 @@ import os
 private_key = os.getenv('PRIVATE_KEY')
 public_key = os.getenv('PUBLIC_KEY')
 url_endpoint = os.getenv('URL_ENDPOINT')
+
+measurment_ID=os.getenv('MEASUREMENT_ID')
     
 imagekit = ImageKit(
     private_key=private_key,
@@ -26,42 +28,56 @@ imagekit = ImageKit(
 # Basic main page functionality, no overdone things
 def main(request):
   # print(request) #<WSGIRequest: GET '/'>
-  return render(request,'main.html')
+
+  context={'google_id':measurment_ID,}
+  return render(request,'main.html',context)
 
 
 # Contact me route, remember to add form information here? use mailchimp
 
 # About me  route @ /about
 def about_me(request):
-  return render(request,'aboutme.html') 
+
+  context={'google_id':measurment_ID,}
+  return render(request,'aboutme.html',context) 
 
 # Contact me
 def contact_me(request):
-  return render(request,'contactme.html') 
+
+  context={'google_id':measurment_ID,}
+  return render(request,'contactme.html',context) 
 
 
 
 
 # blog page @ /blog /keep the blogs here?
 def blog(request):
-    return render(request,'blogs.html')
+
+  context={'google_id':measurment_ID,}
+  return render(request,'blogs.html',context)
 
 
 def blogs(request,blognum):
+
+  context={'google_id':measurment_ID,}
   if blognum == 1:
-    return render(request,'blog1.html')
+    
+    return render(request,'blog1.html',context)
   elif blognum == 2:
-    return render(request,'blog2.html')
+    return render(request,'blog2.html',context)
   elif blognum == 3:
-    return render(request,'blog3.html')
+    return render(request,'blog3.html',context)
 
 # Motivitational quotes @quotes
 def quote(request):
-  return render(request,'quote.html')
+
+  context={'google_id':measurment_ID,}
+  return render(request,'quote.html',context)
 
 # @gallery  ,using Google cloud storage api 
 
 def gallery(request):
+
   img=[]
   for num in range(1,162,1):
     img.append(f"{num}.jpg")
@@ -75,7 +91,7 @@ def gallery(request):
     })
     imgs.append(imagekit_url)
     # print(imagekit_url) 
-  context={'imgs':imgs}
+  context={'imgs':imgs,'google_id':measurment_ID,}
   return render(request,'gallery.html',context)
 
 
