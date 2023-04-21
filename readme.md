@@ -1,4 +1,31 @@
-# See the world in my eyes
+### Setup:
+In order to use this website, you have to have Python installed, specifically Python 3. To install Python, please visit [python docs](https://www.python.org/downloads/) 
+
+After that, you need to install a virtual environment by running the following command in Windows:
+```bash
+  python -m venv py3Env 
+```
+Then, activate the virtual environment by running this command in the command prompt:
+```bash
+  call py3Env\Scripts\activate 
+```
+After activation, install the project dependencies to the virtual environment using this command:
+```bash
+  pip install -r requirements.txt 
+```
+Then, go to the folder directory where the manage.py file is located and use this command to start the app:
+```bash
+  python manage.py runserver
+```
+The program will run on localhost:8000 and you should be good to go!  
+
+## Screen shots 
+  ![About me](https://api.pikwy.com/web/64432151a0794429f10edcca.jpg)
+  ![Gallery](https://user-images.githubusercontent.com/77834808/233750551-b7724b2f-b42c-42da-a002-64c098101424.png)
+  ![About me](https://api.pikwy.com/web/644323c7b3db0815cf40480e.jpg)
+
+
+# See the world in my eyes 
 > **Note:** If you scroll down to the end of the page and use the footer links, you'll see a blog and a gellery area, and other useful links.
 
 This is a really interesting topic for me, I hope you enjoy this to who ever is reading this.
