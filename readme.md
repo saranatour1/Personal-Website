@@ -19,6 +19,12 @@ Then, go to the folder directory where the manage.py file is located and use thi
 ```
 The program will run on localhost:8000 and you should be good to go!  
 
+### issues
+Some of the issues we faced during the project were related to the problem of static files rendering. Here are a few resources that can make your life easier:
+- [Stack overflow, running on the local host](https://stackoverflow.com/questions/62555499/django-react-the-resource-was-blocked-due-to-mime-type-text-html-mismatch)
+- [Stack overflow, settings.py fix](https://stackoverflow.com/questions/25913849/django-static-file-not-loading)
+- [whitenoise](https://whitenoise.readthedocs.io/en/latest/)
+
 ## Screen shots 
   ![About me](https://api.pikwy.com/web/64432151a0794429f10edcca.jpg)
   ![Gallery](https://user-images.githubusercontent.com/77834808/233750551-b7724b2f-b42c-42da-a002-64c098101424.png)
