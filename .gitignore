@@ -3,3 +3,7 @@ old/
 
 node_modules/
 .vercel
+db.sqlite3
+
+__pycache__/
+
