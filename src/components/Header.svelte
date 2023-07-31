@@ -14,7 +14,7 @@
   const setWindowWidth = () => {
 		windowWidth = window.innerWidth;
     showMobileMenu();
-    console.log('I am working')
+    // console.log('I am working')
 	};
 
   const showMobileMenu =()=>{
@@ -25,7 +25,7 @@
 
 	onMount(() => {		
 		window.addEventListener('resize',   setWindowWidth);
-    console.log(windowWidth)
+    // console.log(windowWidth)
 	});
 
   const showMenuChange =()=>{
