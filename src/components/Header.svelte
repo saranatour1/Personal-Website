@@ -1,7 +1,7 @@
 <script>
 
   import { onMount } from "svelte";
-  import { fade, fly } from 'svelte/transition';
+  import { fade, fly , slide } from 'svelte/transition';
 
 	let windowWidth;
   let isMobileDevice = false;
@@ -72,8 +72,8 @@
 {/if}
 </header>
 
-{#if showMenu}
-  <div class=" flex flex-col justify-between items-start mx-8 h-16 font-serif xl:mx-24">
+{#if showMenu && isMobileDevice}
+  <div class=" flex flex-col justify-between items-start mx-8 h-16 font-serif xl:mx-24" transition:slide>
     <ul class="flex flex-col ps-10 my-1">
       <li class="text-lg">projects</li>
       <li class="text-lg">about</li>
