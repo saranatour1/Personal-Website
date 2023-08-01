@@ -36,7 +36,7 @@
 </script>
 
 
-<header class="flex justify-between items-center mx-8 h-16 font-serif xl:mx-24">
+<header class="flex justify-between items-center mx-8 h-16 font-serif xl:mx-24 sm:mx-5 max-xs:mx-5 max-[320px]:mx-5">
 
   <div class=" font-extrabold text-xl" >
     Logo here
@@ -73,7 +73,7 @@
 </header>
 
 {#if showMenu && isMobileDevice}
-  <div class=" flex flex-col justify-between items-start mx-8 h-16 font-serif xl:mx-24" transition:slide>
+  <div class=" flex flex-col justify-between items-start mx-8  font-serif xl:mx-24" transition:slide>
     <ul class="flex flex-col ps-10 my-1">
       <li class="text-lg">projects</li>
       <li class="text-lg">about</li>
