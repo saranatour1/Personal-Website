@@ -48,7 +48,7 @@
     «
   </button>
   <div class="slider-viewport">
-    <div class="slider-digits" style="transform: translate({20 * offset}%, 0)">
+    <div class="slider-digits " style="transform: translate({20 * offset}%, 0)">
       <!-- <div class="hidden" aria-hidden="true"> <Card item={items[$displayed_count+1]} /></div> -->
       <Card item={items[count]} />
       <!-- <div class="hidden" aria-hidden="true"> <Card item={items[$displayed_count-1]} /></div> -->

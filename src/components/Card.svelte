@@ -5,7 +5,7 @@
   $:console.log(item)
 </script>
 
-<div class=" drop-shadow-md p-6  m-4 rounded-2xl  mt-2 mb-2  bg-slate-50">
+<div class=" drop-shadow-md p-8  m-4 rounded-2xl  mt-2 mb-2  bg-slate-50  w-auto">
   <hgroup class="p-4 rounded-t-xl font-serif">
     {#if item.contact}
         <h3 class="font-title  text-xl md:text-2xl pt-2 pb-2">Contact Info</h3>
@@ -23,7 +23,7 @@
         <a  class=" font-serif w-10" href={item?.contact?.links} target="_blank"><span><img src={item?.contact?.img} alt={`${item?.contact?.title} logo`}></span></a>
         {:else if item?.skills}
         <ScrollSnapper item={item.skills}/>
-        {:else if item.projects}
+        {:else if item?.projects}
         <ScrollSnapper item={item.projects}/>
       {/if}
   </div>
