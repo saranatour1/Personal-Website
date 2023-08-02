@@ -4,28 +4,24 @@
       {
         "title": "Travel Designer",
         "caption": "Travel Designer is a small app where people share their travel ideas or experiences.",
-        "cta": "Learn More",
         "affiliatedWith": "Axsos Academy",
-        "links": "https://github.com/saranatour1/Traval-Designer"
+        "links": {"github":"https://github.com/saranatour1/Traval-Designer"}
       },
       {
         "title": "FeedMe - Wajbat",
-        "caption": "Wajbat is a web application designed to provide restaurants with a dedicated space to gain recognition and attract customers in their local area. By offering a platform for restaurant owners to showcase their establishments and interact with potential customers, Wajbat aims to facilitate the growth and success of local restaurants.",
-        "cta": "Explore",
+        "caption": "Wajbat is a web application designed to provide restaurants with a dedicated space to gain recognition.",
         "affiliatedWith": "Axsos Academy",
-        "links": "https://github.com/saranatour1/FeedMe"
+        "links": {"github":"https://github.com/saranatour1/FeedMe" }
       },
       {
         "title": "Moods",
         "caption": "Moods is a platform that connects people together regardless of time differences.",
-        "cta": "Join Now",
         "affiliatedWith": "Axsos Academy",
-        "links": "https://github.com/saranatour1/Moods"
+        "links": {"github":"https://github.com/saranatour1/Moods"}
       },
       {
         "title": "REST Countries API with color theme switcher",
         "caption": "A Project created Using Svelte",
-        "cta": "Check it out",
         "affiliatedWith": "Front End Mentor challenges",
         "links": {
           "github": "https://github.com/saranatour1/rest-countries",
@@ -35,7 +31,6 @@
       {
         "title": "Age calculator app",
         "caption": "An Age calculator app with form validations, created with SolidJs",
-        "cta": "Check it out",
         "affiliatedWith": "Front End Mentor challenges",
         "links": {
           "github": "https://github.com/saranatour1/age-calculator",
@@ -45,7 +40,6 @@
       {
         "title": "Newsletter sign-up with-success-message",
         "caption": "A News letter sign up Created With Vue",
-        "cta": "Check it out",
         "affiliatedWith": "Front End Mentor challenges",
         "links": {
           "github": "https://github.com/saranatour1/newsletter-sign-up-with-success-message-main",
@@ -55,7 +49,6 @@
       {
         "title": "Time zone Comparison",
         "caption": "Created with Svelte",
-        "cta": "Check it out",
         "affiliatedWith": "Personal",
         "links": {
           "github": "https://github.com/saranatour1/TimeZones-in-Svelte",
@@ -66,20 +59,22 @@
   },
   {
     "skills": [
-      { "title": "React", "img": "https://w7.pngwing.com/pngs/403/269/png-transparent-react-react-native-logos-brands-in-colors-icon-thumbnail.png" },
-      { "title": "Java Spring boot", "img": "https://image.pngaaa.com/546/2459546-middle.png" },
-      { "title": "Django", "img": "https://w7.pngwing.com/pngs/159/366/png-transparent-django-python-computer-icons-logo-python-text-label-rectangle-thumbnail.png" },
-      { "title": "Flask", "img": "https://w7.pngwing.com/pngs/166/342/png-transparent-flask-python-bottle-web-framework-web-application-flask-white-monochrome-shoe.png" },
-      { "title": "NodeJS", "img": "https://w7.pngwing.com/pngs/56/223/png-transparent-node-js-javascript-computer-icons-github-angle-text-logo.png" },
+      { "title": "React", "img": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+      { "title": "Java Spring boot", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/1040px-Spring_Boot.svg.png" },
+      { "title": "Django", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Django_logo.svg/640px-Django_logo.svg.png" },
+      { "title": "Flask", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1060px-Flask_logo.svg.png" },
+      { "title": "NodeJS", "img": "https://upload.wikimedia.org/wikipedia/commons/6/67/NodeJS.png" },
       { "title": "JavaScript", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" },
       { "title": "TypeScript", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" },
-      { "title": "Java", "img": "https://w7.pngwing.com/pngs/578/816/png-transparent-java-class-file-java-platform-standard-edition-java-development-kit-java-runtime-environment-coffee-jar-text-class-orange-thumbnail.png" }
+      { "title": "Java", "img": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/500px-Java_programming_language_logo.svg.png" }
+
     ]
   },
   {
     "contact": {
       "title": "LinkedIn",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png"
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png",
+      "links":"https://www.linkedin.com/in/saranatour/"
     }
   }
 ]
