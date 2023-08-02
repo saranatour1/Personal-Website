@@ -36,7 +36,7 @@
 </script>
 
 
-<header class="flex justify-between items-center mx-8 h-16 font-serif xl:mx-24 sm:mx-5 max-xs:mx-5 max-[320px]:mx-5">
+<header class="flex justify-between items-center mx-8 h-16 font-serif xl:mx-24 sm:mx-5 max-xs:mx-5 max-[320px]:mx-5 ">
 
   <div class=" font-extrabold text-xl" >
     Logo here
@@ -93,6 +93,8 @@ header {
   margin-right:10rem ;
 }
 }
+
+
 
 .burger-menu, .burger-line {
   list-style: none;

@@ -2,7 +2,7 @@
   import { onMount, onDestroy } from 'svelte';
   import { spring } from 'svelte/motion';
   import Card from './Card.svelte';
-
+  import items from '../data/data.json';
   let count = 0;
   const displayed_count = spring();
   $: displayed_count.set(count);
@@ -16,11 +16,11 @@
   }
 
   const moveRight = () => {
-    count = (count + 1) % test.length;
+    count = (count + 1) % items.length;
   }
 
   const moveLeft = () => {
-    count = (count - 1 + test.length) % test.length;
+    count = (count - 1 + items.length) % items.length;
   }
 
   const startInterval = () => {
@@ -44,18 +44,21 @@
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div class="slider" on:mouseenter={stopInterval} on:mouseleave={startInterval} >
-  <button id="left" on:click={moveLeft} aria-label="Move left">
+  <button class="py-2 px-2" id="left" on:click={moveLeft} aria-label="Move left">
     «
   </button>
   <div class="slider-viewport">
-    <div class="slider-digits" style="transform: translate({100 * offset}%, 0)">
-      <Card item={test[count]} />
+    <div class="slider-digits" style="transform: translate({20 * offset}%, 0)">
+      <!-- <div class="hidden" aria-hidden="true"> <Card item={items[$displayed_count+1]} /></div> -->
+      <Card item={items[count]} />
+      <!-- <div class="hidden" aria-hidden="true"> <Card item={items[$displayed_count-1]} /></div> -->
     </div>
   </div>
-  <button id="right" on:click={moveRight} aria-label="Move right">
+  <button class="py-2 px-2" id="right" on:click={moveRight} aria-label="Move right">
     »
   </button>
 </div>
+
 
 
 
@@ -65,18 +68,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 5px;
     overflow: hidden;
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
     margin: 0 auto;
-    position: relative;
+    /* position: relative; */
+    width: calc(100vw - 30px);
+
   }
 
   .slider button {
-    width: 40px;
-    height: 40px;
+    /* width: 40px;
+    height: 40px; */
     background: none;
     border: none;
     cursor: pointer;
@@ -90,10 +95,10 @@
   }
 
   .slider-viewport {
-    width: 100%;
-    height: auto;
+    /* width: 100%;
+    height: auto; */
     overflow: hidden;
-    position: relative;
+    /* position: relative; */
   }
 
   .slider-digits {
