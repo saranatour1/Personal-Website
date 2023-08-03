@@ -18,12 +18,12 @@
     <div class="flex space-x-4 my-2 max-[400px]:my-6">
       {#if child.links.github}
       <button class="px-4 py-2  bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg  drop-shadow-sm">
-        <a href={child.links.github} target="_blank">Explore on github</a>
+        <a href={child.links.github} target="_blank" class="font-serif text-xs">Explore on github</a>
       </button>
       {/if}
       {#if child.links.live}
-      <button class="px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-lg drop-shadow-sm">
-        <a href={ child.links.live} target="_blank">Live view</a>
+      <button class="px-4 py-2 xs:py-1 xs:px-2 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-lg drop-shadow-sm">
+        <a href={ child.links.live} target="_blank" class="font-serif text-xs">Live view</a>
       </button>
       {/if}
 
