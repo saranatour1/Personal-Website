@@ -1,5 +1,5 @@
 <script>
-  import Slider from "./Slider.svelte";
+  import Slider from "./Slider.unused.svelte";
 
 </script>
 
@@ -27,10 +27,3 @@
 
 </section>
 
-<style>
-  #fix{
-    /* height: 80dvh; */
-  }
-
-
-</style>

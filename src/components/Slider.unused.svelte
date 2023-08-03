@@ -1,7 +1,7 @@
 <script>
   import { onMount, onDestroy } from 'svelte';
   import { spring } from 'svelte/motion';
-  import Card from './Card.svelte';
+  import Card from './Car.unused.svelte';
   import items from '../data/data.json';
   let count = 0;
   const displayed_count = spring();

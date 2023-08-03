@@ -1,5 +1,5 @@
 <script>
-  import ScrollSnapper from "./ScrollSnapper.svelte";
+  import ScrollSnapper from "./ScrollSnapper.unused.svelte";
 
   export let item; /** refers to any one of the Items in data.json*/
   $:console.log(item)
