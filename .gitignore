@@ -1,10 +1,21 @@
-old/
-*.env
+# build output
+dist/
 
+# generated types
+.astro/
+
+# dependencies
 node_modules/
-.vercel
-db.sqlite3
 
-*__pycache__/
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-test.py
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store

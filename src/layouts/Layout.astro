@@ -1,0 +1,55 @@
+--- 
+import Header from '../components/Header.svelte';
+interface Props {
+	title: string;
+}
+const currentYear = new Date().getFullYear();
+const { title } = Astro.props;
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="w-screen  bg-gray-100">
+			<Header client:only="svelte"/>
+		<slot />
+		<footer class="w-screen h-16 flex items-center justify-center font-serif flex-col "> 
+			<p>Made with  <a class="ms-1" href="https://astro.build/"> Astro &#9825;</a>  </p>
+			<p> © <a href="https://github.com/saranatour1/">Sara Natour</a> {currentYear}</p>
+
+		</footer>
+	</body>
+</html>
+<style is:global>
+	
+	::-webkit-scrollbar {
+  width: 10px;
+  height: 30px;
+
+}
+::-webkit-scrollbar-track:hover{
+	background-color: rgba(211, 211, 211, 0.2);
+}
+::-webkit-scrollbar-thumb{
+	border-radius: 20px;
+	width: 5px;
+}
+
+::-webkit-scrollbar-track-piece  {
+  background-color: transparent;
+}
+
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 30px;
+  background-color: lightgray;
+}
+</style>
