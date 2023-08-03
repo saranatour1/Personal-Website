@@ -3,6 +3,7 @@
   import { onMount } from "svelte";
   import { fade, fly , slide } from 'svelte/transition';
 
+
 	let windowWidth;
   let isMobileDevice = false;
   let showMenu = false;
@@ -14,7 +15,6 @@
   const setWindowWidth = () => {
 		windowWidth = window.innerWidth;
     showMobileMenu();
-    // console.log('I am working')
 	};
 
   const showMobileMenu =()=>{
@@ -25,7 +25,6 @@
 
 	onMount(() => {		
 		window.addEventListener('resize',   setWindowWidth);
-    // console.log(windowWidth)
 	});
 
   const showMenuChange =()=>{
@@ -36,10 +35,10 @@
 </script>
 
 
-<header class="flex justify-between items-center mx-8 h-16 font-serif xl:mx-24 sm:mx-5 max-xs:mx-5 max-[320px]:mx-5 ">
+<header class="flex justify-between items-center  px-6 h-16 font-serif  fixed w-full top-0 left-0 ">
 
   <div class=" font-extrabold text-xl" >
-    Logo here
+    <a href="/"> Logo here</a>
   </div>
 
 {#if isMobileDevice}
@@ -58,10 +57,10 @@
   {:else}
   <div class="flex  items-center justify-center" transition:fade>
     <ul class="flex space-x-6">
-      <li>projects</li>
-      <li>about</li>
-      <li>blogs</li>
-      <li>contact</li>
+      <li class="text-lg"><a href="/projects" class=" hover:text-cyan-400">Projects</a> </li>
+      <li class="text-lg"><a href="/about" class=" hover:text-cyan-400"> About Me</a></li>
+      <li class="text-lg"><a href="/blogs" class=" hover:text-cyan-400">blogs</a></li>
+      <li class="text-lg"><a href="/contact" class=" hover:text-cyan-400">contact</a> </li>
     </ul>
   </div>
   
@@ -73,12 +72,12 @@
 </header>
 
 {#if showMenu && isMobileDevice}
-  <div class=" flex flex-col justify-between items-start mx-8  font-serif xl:mx-24" transition:slide>
+  <div class=" flex flex-col justify-between items-start mx-8  font-serif xl:mx-24 mt-16" transition:slide>
     <ul class="flex flex-col ps-10 my-1">
-      <li class="text-lg">projects</li>
-      <li class="text-lg">about</li>
-      <li class="text-lg">blogs</li>
-      <li class="text-lg">contact</li>
+      <li class="text-lg"><a href="/projects" class=" hover:text-cyan-400">Projects</a> </li>
+      <li class="text-lg"><a href="/about" class=" hover:text-cyan-400"> About Me</a></li>
+      <li class="text-lg"><a href="/blogs" class=" hover:text-cyan-400">blogs</a></li>
+      <li class="text-lg"><a href="/contact" class=" hover:text-cyan-400">contact</a> </li>
       <li class="text-lg">    <button class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800    font-medium rounded-3xl text-sm px-5 py-2.5 text-center drop-shadow-md"> Hire Me</button>
       </li>
     </ul>
@@ -89,8 +88,7 @@
 <style>
 @media screen and (min-width: 1280px) {
 header {
-  margin-left:10rem;
-  margin-right:10rem ;
+margin: 0;
 }
 }
 
