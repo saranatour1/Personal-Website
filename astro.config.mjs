@@ -6,7 +6,11 @@ import svelte from "@astrojs/svelte";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), svelte()],
-  // redirects:{
-  //   '/new-page': '/'
-  // }
+  redirects:{
+    '/projects/': '/503',
+    '/about/': '/503',
+    '/contact/': '/503',
+    '/blogs/': '/503',
+
+  }
 });

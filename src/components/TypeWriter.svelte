@@ -2,12 +2,15 @@
   import { onMount } from "svelte";
 
   const funText = [
+    'Sara Natour',
     'a Full-Stack Developer ...',
     'an Electrical Engineer ...',
     '24 years old ...',
-    'Perfectionist ...',
-    'Reader ...',
-    'Food Lover ...',
+    'a Perfectionist ...',
+    'a Reader ...',
+    'a Food Lover ...',
+    'a Writer..',
+    'coffee Lover',
     'Passionate Learner ...',
     'a Geek ...',
     'What else?',
@@ -53,12 +56,19 @@ const backTrackingEffect = (textToDelete) => {
   }, 100); 
 }
 
-  onMount(() => {
-    setInterval(changeIdx,10000);
+  // onMount was super unneccessary since the setInterval does run on its own with repeat
+
+  onMount(()=>{
+    setInterval(changeIdx,7000);
+    return(()=>{
+      clearInterval(7000);
+    })
   })
+
+
 </script>
 
-<span class="font-semibold font-serif text-blue-950">
+<span class="font-semibold font-serif text-blue-950 typewriter">
   {textToDisplay}  
 </span>
 
@@ -66,4 +76,29 @@ const backTrackingEffect = (textToDelete) => {
   span:hover {
     text-shadow: 1px 1px 2px rgba(255, 215, 0, 0.8);
   }
+
+
+  /* source */
+  .typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
 </style>

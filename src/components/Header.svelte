@@ -38,7 +38,7 @@
 <header class="flex justify-between items-center  px-6 h-16 font-serif  fixed w-full top-0 left-0 ">
 
   <div class=" font-extrabold text-xl" >
-    <a href="/"> Logo here</a>
+    <a href="/"> <img src="/logo.svg" alt="My cat Logo"></a>
   </div>
 
 {#if isMobileDevice}
