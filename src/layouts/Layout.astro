@@ -5,7 +5,7 @@ interface Props {
 }
 const currentYear = new Date().getFullYear();
 const { title } = Astro.props;
-const data= import.meta.env.POKEAPI
+const data= import.meta.env.POKEAPI;
 ---
 
 
@@ -16,7 +16,7 @@ const data= import.meta.env.POKEAPI
 		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<!-- <meta name="google-site-verification" content={data} /> -->
+		<meta name="google-site-verification" content={data} />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -24,7 +24,7 @@ const data= import.meta.env.POKEAPI
 			<Header client:only="svelte"/>
 		<slot />
 		<footer class="w-screen h-16 flex items-center justify-center font-serif flex-col "> 
-			<p>Made with  <a class="ms-1" href="https://astro.build/"> Astro &#9825;</a>  </p>
+			<p>Made with  <a class="ms-1" href="https://astro.build/"> Astro </a> & <a href="https://svelte.dev/">Svelte</a> &#9825; </p>
 			<p> © <a href="https://github.com/saranatour1/">Sara Natour</a> {currentYear}</p>
 
 		</footer>

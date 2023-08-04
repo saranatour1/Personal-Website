@@ -1,6 +1,7 @@
 ---
+import Icons from "./Icons.astro";
 import TypeWriter from "./TypeWriter.svelte";
-import {Icon} from 'astro-icon'
+
 
 ---
 
@@ -16,27 +17,8 @@ import {Icon} from 'astro-icon'
   
         </p>
       </hgroup>
-      
-      <div class="flex justify-evenly w-16 items-end h-20">
+        <Icons /> 
 
-          <!-- Uses the linkedIn from `/src/icons/filename.svg` -->
-         <a href="https://www.linkedin.com/in/saranatour/" target="_blank"><Icon name="mdi:linkedin" /></a> 
-         <a href="https://github.com/saranatour1" target="_blank"><Icon name="mdi:github" /></a> 
-
-      </div>
 
     </div>
 </section>
-<style lang="css">
-  [astro-icon] {
-      color: rgb(15 23 42);
-      /* OR */
-      fill: blue;
-      width: 4.5rem;
-  }
-  [astro-icon="annotation"] {
-      color: red;
-      /* OR */
-      fill: red;
-  }
-</style>

@@ -9,7 +9,6 @@ export default defineConfig({
   redirects:{
     '/projects/': '/503',
     '/about/': '/503',
-    '/contact/': '/503',
     '/blogs/': '/503',
 
   }

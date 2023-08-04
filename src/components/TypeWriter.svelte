@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
 
   const funText = [
     'Sara Natour',
@@ -55,16 +55,18 @@ const backTrackingEffect = (textToDelete) => {
     }
   }, 100); 
 }
-
-  // onMount was super unneccessary since the setInterval does run on its own with repeat
+  let intervalId;
 
   onMount(()=>{
-    setInterval(changeIdx,7000);
-    return(()=>{
-      clearInterval(7000);
-    })
+    intervalId = setInterval(changeIdx, 7000);
+
   })
 
+  
+
+  onDestroy(() => {
+  clearInterval(intervalId);
+});
 
 </script>
 
