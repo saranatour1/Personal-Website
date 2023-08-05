@@ -10,7 +10,19 @@ import rehypeSlug from 'rehype-slug';
 export default defineConfig({
   integrations: [tailwind(), svelte(), mdx()],
   markdown: {
-    remarkPlugins: [ [remarkToc, { heading: "contents"} ] ],
-    rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: 'append' }]],
-  },
+    syntaxHighlight: false,
+    rehypePlugins: [
+        rehypeSlug,
+        [rehypeAutolinkHeadings, {
+            behavior: "prepend",
+            content: {
+                type: "element",
+                tagName: "span",
+                properties: { className: "header-link" },
+                children: [{ type: "text", value: "#" }],
+            },
+        }],
+    ],
+},
+
 });
