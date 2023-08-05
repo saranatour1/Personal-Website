@@ -65,7 +65,7 @@
   </div>
   
   <div class="flex items-center justify-center" transition:fade>
-    <button class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800    font-medium rounded-3xl text-sm px-5 py-2.5 text-center drop-shadow-md"> Hire Me</button>
+    <button class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800    font-medium rounded-3xl text-sm px-5 py-2.5 text-center drop-shadow-md"> <a href="https://calendly.com/saranatour1/30min" target="_blank">Hire Me</a> </button>
   </div>
 
 {/if}
@@ -78,7 +78,7 @@
       <li class="text-lg"><a href="/about" class=" hover:text-cyan-400"> About Me</a></li>
       <li class="text-lg"><a href="/blogs" class=" hover:text-cyan-400">blogs</a></li>
       <li class="text-lg"><a href="/contact" class=" hover:text-cyan-400">contact</a> </li>
-      <li class="text-lg">    <button class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800    font-medium rounded-3xl text-sm px-5 py-2.5 text-center drop-shadow-md"> Hire Me</button>
+      <li class="text-lg">    <button class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800    font-medium rounded-3xl text-sm px-5 py-2.5 text-center drop-shadow-md"> <a href="https://calendly.com/saranatour1/30min" target="_blank">Hire Me</a> </button>
       </li>
     </ul>
 

@@ -56,21 +56,16 @@ const backTrackingEffect = (textToDelete) => {
   }, 100); 
 }
   let intervalId;
-
   onMount(()=>{
     intervalId = setInterval(changeIdx, 7000);
-
   })
-
-  
-
   onDestroy(() => {
   clearInterval(intervalId);
 });
 
 </script>
 
-<span class="font-semibold font-serif text-blue-950 typewriter">
+<span class="font-semibold font-serif text-blue-950 typewriter indent-2 w-min">
   {textToDisplay}  
 </span>
 
@@ -78,7 +73,6 @@ const backTrackingEffect = (textToDelete) => {
   span:hover {
     text-shadow: 1px 1px 2px rgba(255, 215, 0, 0.8);
   }
-
 
   /* source */
   .typewriter {
