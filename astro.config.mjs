@@ -8,6 +8,10 @@ import rehypeSlug from 'rehype-slug';
 
 // https://astro.build/config
 export default defineConfig({
+  redirects: {
+    '/projects': '/503',
+    '/blogs': '/503',
+  },
   integrations: [tailwind(), svelte(), mdx()],
   markdown: {
     syntaxHighlight: false,
@@ -24,5 +28,6 @@ export default defineConfig({
         }],
     ],
 },
+
 
 });

@@ -22,8 +22,11 @@ const data= import.meta.env.POKEAPI;
 	</head>
 	<body class="w-screen  bg-gray-100">
 			<Header client:only="svelte"/>
-		<slot />
-		<footer class="w-screen h-16 flex items-center justify-center font-serif flex-col "> 
+			<div class="flex flex-col items-center justify-center">
+				<slot />
+			</div>
+
+		<footer class="w-screen h-16 mt-16 flex items-center justify-center font-serif flex-col "> 
 			<p>Made with  <a class="ms-1" href="https://astro.build/"> Astro </a> & <a href="https://svelte.dev/">Svelte</a> &#9825; </p>
 			<p> © <a href="https://github.com/saranatour1/">Sara Natour</a> {currentYear}</p>
 
@@ -31,12 +34,11 @@ const data= import.meta.env.POKEAPI;
 	</body>
 </html>
 <style is:global>
-	
 	::-webkit-scrollbar {
   width: 10px;
   height: 30px;
-
 }
+
 ::-webkit-scrollbar-track:hover{
 	background-color: rgba(211, 211, 211, 0.2);
 }
@@ -64,5 +66,16 @@ const data= import.meta.env.POKEAPI;
     color: goldenrod;
   }
 
+	li >p{
+		text-indent: 0 !important;
+	}
+
+	li p > img{
+		width: 2rem !important;
+		margin: 0 !important;
+	}
+	/* ul:nth-of-type(2){
+		display: flex;
+	} */
 
 </style>
