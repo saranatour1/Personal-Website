@@ -20,6 +20,13 @@ const googleTag= import.meta.env.MEASUREMENT_ID;
 		<meta name="google-site-verification" content={data} />
 		<meta name="generator" content={Astro.generator} />
 		<script async src=`https://www.googletagmanager.com/gtag/js?id=${googleTag}`></script>
+		<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', googleTag);
+    </script>
 		<title>{title}</title>
 	</head>
 	<body class="w-screen  bg-gray-100">
