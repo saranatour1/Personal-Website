@@ -1,0 +1,13 @@
+---
+import Header from "./Header.svelte";
+const path = new URL(Astro.request.url).pathname.match(/^(.+?)(?:\/|$)/)![1];
+
+const routes: [string, string][] = [
+    ["/", "Home"],
+    ["/projects", "Projects"],
+    ["/blogs", "Blogs"],
+    ["/about", "About Me"],
+    ["/contact", "Contact"],
+];
+---
+<Header {routes} {path}  client:only="svelte"/>

@@ -3,6 +3,8 @@
   import { onMount } from "svelte";
   import { fade, fly , slide } from 'svelte/transition';
 
+  export let routes;
+  export let path;
 
 	let windowWidth;
   let isMobileDevice = false;
@@ -57,10 +59,13 @@
   {:else}
   <div class="flex  items-center justify-center" transition:fade>
     <ul class="flex space-x-6">
-      <li class="text-lg"><a href="/projects" class=" hover:text-cyan-400">Projects</a> </li>
-      <li class="text-lg"><a href="/about" class=" hover:text-cyan-400"> About Me</a></li>
-      <li class="text-lg"><a href="/blogs" class=" hover:text-cyan-400">blogs</a></li>
-      <li class="text-lg"><a href="/contact" class=" hover:text-cyan-400">contact</a> </li>
+      {#each routes as [route, name]}
+      <li aria-current={path == route ? "page" : undefined}>
+        <a
+        href={route}
+        class:active={path == route}>{name}</a>
+      </li>
+  {/each}
     </ul>
   </div>
   
@@ -74,10 +79,13 @@
 {#if showMenu && isMobileDevice}
   <div class=" flex flex-col justify-between items-start mx-8  font-serif xl:mx-24 mt-16" transition:slide>
     <ul class="flex flex-col ps-10 my-1">
-      <li class="text-lg"><a href="/projects" class=" hover:text-cyan-400">Projects</a> </li>
-      <li class="text-lg"><a href="/about" class=" hover:text-cyan-400"> About Me</a></li>
-      <li class="text-lg"><a href="/blogs" class=" hover:text-cyan-400">blogs</a></li>
-      <li class="text-lg"><a href="/contact" class=" hover:text-cyan-400">contact</a> </li>
+      {#each routes as [route, name]}
+      <li aria-current={path == route ? "page" : undefined}>
+        <a
+        href={route}
+        class:active={path == route}>{name}</a>
+      </li>
+      {/each}
       <li class="text-lg">    <button class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800    font-medium rounded-3xl text-sm px-5 py-2.5 text-center drop-shadow-md"> <a href="https://calendly.com/saranatour1/30min" target="_blank">Hire Me</a> </button>
       </li>
     </ul>
@@ -155,6 +163,12 @@ margin: 0;
     transform: translateY(-11px) rotate(-45deg);
   }
 }
+
+ a.active {
+  padding-bottom: 5px;
+  border-bottom: 1px solid goldenrod;
+}
+
 
 
 </style>
