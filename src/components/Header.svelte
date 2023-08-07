@@ -83,6 +83,7 @@
       <li aria-current={path == route ? "page" : undefined}>
         <a
         href={route}
+        class="font-serif hover:text-amber-300"
         class:active={path == route}>{name}</a>
       </li>
       {/each}
@@ -95,9 +96,9 @@
 
 <style>
 @media screen and (min-width: 1280px) {
-header {
-margin: 0;
-}
+  header {
+  margin: 0;
+  }
 }
 
 
@@ -163,6 +164,7 @@ margin: 0;
     transform: translateY(-11px) rotate(-45deg);
   }
 }
+
 
  a.active {
   padding-bottom: 5px;

@@ -1,6 +1,7 @@
 --- 
-import Header from '../components/Header.svelte';
+
 import Nav from '../components/Nav.astro';
+import { ViewTransitions } from 'astro:transitions';
 interface Props {
 	title: string;
 }
@@ -29,6 +30,7 @@ const googleTag= import.meta.env.MEASUREMENT_ID;
       gtag('config', googleTag);
     </script>
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body class="w-screen  bg-gray-100">
 			<Nav />
