@@ -21,6 +21,11 @@ const googleTag= import.meta.env.MEASUREMENT_ID;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="google-site-verification" content={data} />
 		<meta name="generator" content={Astro.generator} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content="The Personal hub for Sara Natour, a full stack developer and electrical engineer to showcase her projects and Recent Career Changes"/>
+		<meta property="og:url" content="https://personal-website-indol-sigma.vercel.app/">
+		<meta property="og:site_name" content="Sara Natour Personal Page">
+		<meta property="og:image" content="https://personal-website-indol-sigma.vercel.app/logo.svg" />
 		<script async src=`https://www.googletagmanager.com/gtag/js?id=${googleTag}`></script>
 		<script>
       window.dataLayer = window.dataLayer || [];
