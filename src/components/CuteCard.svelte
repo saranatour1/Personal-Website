@@ -1,6 +1,6 @@
 <script>
   import items from '../data/data.json';
-  console.log(items);
+
 
   // Remove any spaces, make it Lowercased, and add '-'
 
