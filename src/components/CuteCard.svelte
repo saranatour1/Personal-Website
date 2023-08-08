@@ -1,6 +1,13 @@
 <script>
   import items from '../data/data.json';
   console.log(items);
+
+  // Remove any spaces, make it Lowercased, and add '-'
+
+  const removeSpacesFromID =(title)=>{
+    return title.split(' ').join('-').toLowerCase();
+  }
+
 </script>
 
 {#each items as item}
@@ -9,8 +16,8 @@
   <div class="max-w-md mx-auto  bg-gradient-to-br bg-zinc-50 rounded-lg shadow-md p-6 my-4 drop-shadow-md hover:border-teal-600 border">
     <details>
       <summary class=" flex">
-        <h3 class="text-xl font-semibold text-gray-800 m-0">
-          <a href={`#${project.title}`}>
+        <h3 class="text-xl font-semibold text-gray-800 m-0" id={removeSpacesFromID(project.title)}>
+          <a href={`#${removeSpacesFromID(project.title)}`}>
           <span class="header-link">#</span>
           </a>
           {project.title}
