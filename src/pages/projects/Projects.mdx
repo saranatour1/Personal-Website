@@ -4,40 +4,12 @@ currentDate:  Aug 7, 2023
 title: My Projects 
 ---
 export const currentDate =  'Aug 7, 2023';
-import CuteCard from '../../components/CuteCard.svelte';
+import ProjectCards from '../../components/ProjectCards.astro'
 
 <sub> **Published on** *{currentDate}*</sub>
 
 ## A list of my Full-Stack Projects
 I have done a few full-Stack projects during my time with Axsos Academy, here is a set of Them [<small>Also You can find all of my most recent projects on my github</small>]: 
+<ProjectCards />
 
-### Moods : 
 
-<details>
-  <summary>Moods is a platform that connects people together regardless of time differences.Main Technologies used :Python (Django) ,BootStrap , Ajax , SQLLite .<img src="https://user-images.githubusercontent.com/77834808/230228434-15fbe2c1-dc37-4518-9f00-9affb391acb0.png" alt="Small Image" style="max-width: 200px;"/></summary>
-
-- Screenshots:
-  - Sign In and Sign Up Pages:
-    On these pages, we have used Ajax to implement the non-refreshing page method for a better user experience. Once the user registers for the app, they are redirected to the main dashboard to let them know that their registration process went smoothly. Once they sign up, a random avatar is generated for them based on their first name. You can find out more about how to use this avatar here -->> [Random Avatar](https://www.stefanjudis.com/blog/apis-to-generate-random-user-avatars/#multiavatar-api)..
-    <CuteCard descreption={{'img':'https://user-images.githubusercontent.com/77834808/233746123-ff6d8970-0013-44a2-ae8e-f86508a591a0.png','alt':'Main Sign up page for moods'}}/>
-  -  Logged In Profile Pages:
-    When we go to our profile in the navigation bar or click on our name, we are redirected to our main profile. Here, we can see our posts, our friends, our requests, and we can post on our profiles, which will also be displayed on the main dashboard.
-    <CuteCard descreption={{'img':'https://user-images.githubusercontent.com/77834808/233746399-3d51a16b-b9e4-417b-a153-4f3356645bcc.png','alt':'Logged in user profile page'}}/>
-  - dashboard:
-    in the dashboard, You are met on the left with your user information, and on the right you have the abilty to see people's posts and comment them, you can have your own posts, you have the ability to delete your own comments and posts. Ajax was implemented here on the comments, posts, likes. 
-
-    We have used alot of crud operations here, such as Creating a post object, creating a like on the post and updating the count, and many more, you can feel free to check our models file with the views. 
-    <CuteCard descreption={{'img':'https://user-images.githubusercontent.com/77834808/233746267-7f9f5cef-5b9f-4550-a3c4-eb71388d4550.png','alt':'Dashboard'}}/>
-  - Other Users' Profiles:
-    This is very similar to the user profile page. Here, we can see the other user's information and posts, with an additional feature to see their local time and the time difference between both of you. We can also add them as a friend, and check if they have sent us a friend request.
-    <CuteCard descreption={{'img':'https://user-images.githubusercontent.com/77834808/233746610-762a3217-35ab-49d0-bea7-d37810f36ce5.png','alt':'other User profiles'}}/>
-  - Messages:
-    When you go to the messages section, you will see the users you have sent messages to, the users you have not sent messages to, and other users' information.
-    <CuteCard descreption={{'img':'https://user-images.githubusercontent.com/77834808/233746747-183e9b39-3750-406d-9129-f31e03eb87a6.png','alt':'Messages'}}/>
-  - Search:
-    We have added a search feature where you can look up people by their first name, last name, and email.
-    <CuteCard descreption={{'img':'https://user-images.githubusercontent.com/77834808/233746904-79135a08-86bb-43e9-ade1-2558ca386a61.png','alt':'Search'}}/>
-  - Custom error pages
-    we have added a custom error page for errors  :404 and 500, and in the future we are planning to add more
-    <CuteCard descreption={{'img':'https://user-images.githubusercontent.com/77834808/233746956-2edb4807-3b8c-42f4-ba58-16eb8c4c02b1.png','alt':'Special Error messages'}}/>
-</details>
