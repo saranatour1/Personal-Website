@@ -1,10 +1,12 @@
 ---
 import {Icon} from 'astro-icon'
+const Email= import.meta.env?.Email;
 ---
   <div class="flex justify-evenly w-16 items-end h-20">
     <!-- Uses the linkedIn from `/src/icons/filename.svg` -->
     <a href="https://www.linkedin.com/in/saranatour/" target="_blank"><Icon name="mdi:linkedin" /></a> 
     <a href="https://github.com/saranatour1" target="_blank"><Icon name="mdi:github" /></a> 
+    <a href=`mailto:${Email}` target="_blank"><Icon name="mdi:gmail" /></a> 
   </div>
 
 <style lang="css">
