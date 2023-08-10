@@ -2,6 +2,7 @@
 
 import Nav from '../components/Nav.astro';
 import { ViewTransitions } from 'astro:transitions';
+import PopUp from '../components/PopUp.svelte';
 interface Props {
 	title: string;
 }
@@ -43,6 +44,7 @@ const googleTag= import.meta.env?.MEASUREMENT_ID;
 			<div class="flex flex-col items-center justify-center">
 				<slot />
 			</div>
+			<!-- <PopUp client:only="svelte" /> -->
 
 		<footer class="w-screen h-16  flex items-center justify-center font-serif flex-col "> 
 			<p>Made with  <a class="ms-1" href="https://astro.build/"> Astro </a> & <a href="https://svelte.dev/">Svelte</a> &#9825; </p>
