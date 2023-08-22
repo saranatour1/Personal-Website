@@ -1,7 +1,7 @@
 <script>
   import { onMount, onDestroy } from "svelte";
   import Typewriter from 'svelte-typewriter'
-  
+
   const funText = [
     'Sara Natour',
     'a Full-Stack Developer ...',
@@ -19,15 +19,33 @@
 
   let i = 0;
   let textToDisplay = funText[i];
-  
-  const updateText = () => {
-    i = (i + 1) % funText.length;
-    textToDisplay = funText[i];
-    setTimeout(updateText, 4000);
+  let requestId = null;
+  let lastTimestamp = 0;
+
+  const updateText = (timestamp) => {
+    if (!lastTimestamp) {
+      lastTimestamp = timestamp;
+    }
+    const elapsed = timestamp - lastTimestamp;
+    if (elapsed >= 3000) { 
+      i = (i + 1) % funText.length;
+      textToDisplay = funText[i];
+      lastTimestamp = timestamp;
+    }
+    requestId = requestAnimationFrame(updateText);
   };
 
   onMount(() => {
-    updateText();
+    console.log("I happened ")
+    requestId = requestAnimationFrame(updateText);
+  });
+
+  /**
+   *  a function that we can use to decide if a component or an HTML page is unrendered or unmounted.
+  */
+  onDestroy(() => {
+    cancelAnimationFrame(requestId);
+    console.log("I am Destroyed ")
   });
 
 </script>
@@ -35,7 +53,7 @@
 
 
 
-<Typewriter wordInterval=1000 unwriteInterval=1000>
+<Typewriter  on:done={()=> updateText()}>
   <span class="font-semibold font-serif text-blue-950 typewriter indent-2 w-min" >
     {textToDisplay}  
   </span>
