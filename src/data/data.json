@@ -2,6 +2,13 @@
   {
     "projects": [
       {
+        "title": "Image Infinite Scroll",
+        "caption": "A Personal Photo Dump",
+        "affiliatedWith": "Personal",
+        "links": {"github":"https://github.com/saranatour1/SunSet-and-Surise-imageScroller",
+        "live": "https://sun-set-and-surise-image-scroller.vercel.app/"}
+      },
+      {
         "title": "Travel Designer",
         "caption": "Travel Designer is a small app where people share their travel ideas or experiences.",
         "affiliatedWith": "Axsos Academy",
