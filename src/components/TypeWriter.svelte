@@ -1,6 +1,7 @@
 <script>
-  import { onDestroy, onMount } from "svelte";
-
+  import { onMount, onDestroy } from "svelte";
+  import Typewriter from 'svelte-typewriter'
+  
   const funText = [
     'Sara Natour',
     'a Full-Stack Developer ...',
@@ -10,64 +11,37 @@
     'a Reader ...',
     'a Food Lover ...',
     'a Writer..',
-    'coffee Lover',
-    'Passionate Learner ...',
+    'a coffee Lover',
+    'a Passionate Learner ...',
     'a Geek ...',
     'What else?',
   ];
 
-  let textToDisplay = funText[0];
-  let idx = 0;
-
-  const changeIdx = () => {
-    // textToDisplay = funText[idx];
-
-    if (idx + 1 === funText.length) {
-      idx = 0;
-    } else {
-      idx++;
-    }
-    TypeWriterEffect(funText[idx]);
-  }
-  const waitInterval = 1000;
-
-
-
-const TypeWriterEffect = (textToAdd) => {
   let i = 0;
-  const interval = setInterval(() => {
-    textToDisplay = textToAdd.slice(0, i + 1);
-    i++;
-    if (i === textToAdd.length) {
-      setTimeout(() => backTrackingEffect(textToAdd), waitInterval); 
-      clearInterval(interval);
-    }
-  }, 100);
-}
+  let textToDisplay = funText[i];
+  
+  const updateText = () => {
+    i = (i + 1) % funText.length;
+    textToDisplay = funText[i];
+    setTimeout(updateText, 4000);
+  };
 
-const backTrackingEffect = (textToDelete) => {
-  let i = textToDelete.length;
-  const interval = setInterval(() => {
-    textToDisplay = textToDelete.substring(0, i);
-    i--;
-    if (i === -1) {
-      clearInterval(interval);
-    }
-  }, 100); 
-}
-  let intervalId;
-  onMount(()=>{
-    intervalId = setInterval(changeIdx, 7000);
-  })
-  onDestroy(() => {
-  clearInterval(intervalId);
-});
+  onMount(() => {
+    updateText();
+  });
 
 </script>
 
-<span class="font-semibold font-serif text-blue-950 typewriter indent-2 w-min">
-  {textToDisplay}  
-</span>
+
+
+
+<Typewriter wordInterval=1000 unwriteInterval=1000>
+  <span class="font-semibold font-serif text-blue-950 typewriter indent-2 w-min" >
+    {textToDisplay}  
+  </span>
+  
+</Typewriter>
+
 
 <style>
   span:hover {
