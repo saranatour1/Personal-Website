@@ -61,7 +61,26 @@
           "github": "https://github.com/saranatour1/TimeZones-in-Svelte",
           "live": "https://time-zones-in-svelte.vercel.app/"
         }
+      },
+      {
+        "title": "Random Advice Generator in svelte",
+        "caption": "A random Advice Generator made with Svelte ",
+        "affiliatedWith": "Front End Mentor challenges",
+        "links": {
+          "github": "https://github.com/saranatour1/Random-Advice-Generator--FEMC",
+          "live": "https://random-advice-blush.vercel.app/"
+        }
+      },
+      {
+        "title": "Ecommerce Product With React + Vite",
+        "caption": "An Eccomerce Product Page made With React + TypeScript + Vite",
+        "affiliatedWith": "Front End Mentor challenges",
+        "links": {
+          "github": "https://github.com/saranatour1/Ecommerce-Product-FEMC",
+          "live": "https://ecommerce-product-psi.vercel.app/"
+        }
       }
+
     ]
   },
   {
