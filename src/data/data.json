@@ -79,6 +79,15 @@
           "github": "https://github.com/saranatour1/Ecommerce-Product-FEMC",
           "live": "https://ecommerce-product-psi.vercel.app/"
         }
+      },
+      {
+        "title": "Chart Expenses",
+        "caption": "Chart Expenses made with Angular",
+        "affiliatedWith": "Front End Mentor challenges",
+        "links": {
+          "github": "https://github.com/saranatour1/Chart-Expenses",
+          "live": "https://chart-expenses.vercel.app/"
+        }
       }
 
     ]
