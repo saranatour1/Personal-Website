@@ -88,6 +88,15 @@
           "github": "https://github.com/saranatour1/Chart-Expenses",
           "live": "https://chart-expenses.vercel.app/"
         }
+      },
+      {
+        "title": "Todo App",
+        "caption": "A Simple Todo application that uses the full CRUD operations in Svelte",
+        "affiliatedWith": "Front End Mentor challenges",
+        "links": {
+          "github": "https://github.com/saranatour1/todo-app-FEMC",
+          "live": "https://todo-app-femc.vercel.app/"
+        }
       }
 
     ]
