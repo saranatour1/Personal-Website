@@ -1,18 +1,50 @@
 ---
 import {Icon} from 'astro-icon'
-const Email= import.meta.env?.Email;
+// import { showToast } from './Icons.astro.0.mjs';
+const Email= import.meta.env.Email;
+const routes = [["https://www.linkedin.com/in/saranatour/","mdi:linkedin"],
+                ["https://github.com/saranatour1","mdi:github"],
+                [`mailto:${Email}`,"mdi:gmail"]];
+
+// console.log(Email)
 ---
+<script>
+  const links =document.querySelectorAll(".link");
+  const linkData = document.querySelectorAll("span")
+
+  links.forEach((link)=>{
+    link.addEventListener("click", ()=>copyToClipboard(link))
+  })
+  export let showToast = false;
+
+  const copyToClipboard =(link)=>{
+    let text = link.textContent;
+
+    console.log(link.textContent)
+    navigator.clipboard.writeText(text)
+    .then(() => {
+      showToast = true;
+      console.log('Text copied to clipboard:', text);
+    })
+    .catch((error) => {
+      console.error('Error copying text to clipboard:', error);
+    });
+  }
+  console.log(linkData)
+</script>
+  
+
   <div class="flex justify-evenly w-16 items-end h-20">
-    <!-- Uses the linkedIn from `/src/icons/filename.svg` -->
-    <a href="https://www.linkedin.com/in/saranatour/" target="_blank"><Icon name="mdi:linkedin" /></a> 
-    <a href="https://github.com/saranatour1" target="_blank"><Icon name="mdi:github" /></a> 
-    <a href=`mailto:${Email}` target="_blank"><Icon name="mdi:gmail" /></a> 
+    <!-- {showToast && <p>Hello</p>} -->
+    {routes.map(([key,value],idx)=> (
+         <button class={`link`}><span aria-hidden="true" hidden>{key}</span> <Icon name={value} /></button> 
+    ))}
   </div>
 
 <style lang="css">
   [astro-icon] {
       color: rgb(15 23 42);
-      /* OR */
+
       fill: blue;
       width: 4.5rem;
   }
