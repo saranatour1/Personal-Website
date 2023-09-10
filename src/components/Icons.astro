@@ -7,7 +7,7 @@ const routes = [["https://www.linkedin.com/in/saranatour/","mdi:linkedin"],
 
 ---
 <script>
-  const links = document.querySelectorAll(".link");
+  const links = document.querySelectorAll("a");
 
   //The code is adding a click event listener to each element with the class "link" in the HTML document.
   links.forEach((link)=>{
@@ -25,7 +25,7 @@ const routes = [["https://www.linkedin.com/in/saranatour/","mdi:linkedin"],
 
   <div class="flex justify-evenly w-16 items-end h-20">
     {routes.map(([key,value],idx)=> (
-         <button class={`link`}> <span hidden>{key}</span><Icon name={value} /></button> 
+         <a href="javascript:void(0)"> <span hidden>{key}</span><Icon name={value} /></a> 
     ))}
   </div>
 
