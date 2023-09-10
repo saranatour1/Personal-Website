@@ -23,9 +23,9 @@ const routes = [["https://www.linkedin.com/in/saranatour/","mdi:linkedin"],
 
 </script>
 
-  <div class="flex justify-evenly w-16 items-end h-20">
+  <div class="flex justify-evenly w-16 items-end h-20" >
     {routes.map(([key,value],idx)=> (
-         <a href="javascript:void(0)"> <span hidden>{key}</span><Icon name={value} /></a> 
+         <a href={key}> <span hidden>{key}</span><Icon name={value} /></a> 
     ))}
   </div>
 
