@@ -11,7 +11,7 @@ const routes = [["https://www.linkedin.com/in/saranatour/","mdi:linkedin"],
 
   //The code is adding a click event listener to each element with the class "link" in the HTML document.
   links.forEach((link)=>{
-    link.addEventListener("click" , ()=> goToPage(link.textContent))
+    link.addEventListener("touchstart" , ()=> goToPage(link.textContent))
   })
 
 // The `goToPage` function is a JavaScript function that is called when a link is clicked. It takes the `href` parameter, which represents the URL of the link that was clicked.
