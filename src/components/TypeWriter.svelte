@@ -53,10 +53,14 @@
 
 
 
-<Typewriter  on:done={()=> updateText()}>
-  <span class="font-semibold font-serif text-blue-950 typewriter indent-2 w-min" >
-    {textToDisplay}  
-  </span>
+<Typewriter  on:done={()=> updateText()} class="w-96 h-5">
+  <div>
+    <span  class="font-semibold font-serif text-blue-950 typewriter indent-2 " >
+
+      {@html textToDisplay}  
+    </span>
+  </div>
+
   
 </Typewriter>
 
