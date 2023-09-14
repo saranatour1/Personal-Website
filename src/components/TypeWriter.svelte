@@ -2,7 +2,7 @@
   import { onMount, onDestroy } from "svelte";
   import Typewriter from 'svelte-typewriter'
 
-  const funText = [
+  const text = [
     'Sara Natour',
     'a Full-Stack Developer ...',
     'an Electrical Engineer ...',
@@ -16,6 +16,12 @@
     'a Geek ...',
     'What else?',
   ];
+
+  function wrapWithSpan(textArray) {
+    return textArray.map((text) => `<span>${text}</span>`);
+  }
+  let funText = wrapWithSpan(text);
+
 
   let i = 0;
   let textToDisplay = funText[i];
