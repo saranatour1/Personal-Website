@@ -76,6 +76,7 @@
 {/if}
 </header>
 
+
 {#if showMenu && isMobileDevice}
   <div class=" flex flex-col justify-between items-start mx-8  font-serif xl:mx-24 mt-16" transition:slide>
     <ul class="flex flex-col ps-10 my-1">
