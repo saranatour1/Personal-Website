@@ -31,7 +31,7 @@ export default component$(() => {
 `);
 
 const dateNow = new Date("09/24/2023");
-  return <section class=" bg-slate-100 w-full min-h-screen flex flex-col justify-normal  p-10 " id='projects'>
+  return <section class=" bg-stone-50 w-screen min-h-screen flex flex-col justify-normal  p-10 " id='projects'>
       <div class="flex justify-start items-start h-fit my-5">
         <BackButton />
       </div>

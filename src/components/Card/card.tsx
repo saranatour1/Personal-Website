@@ -11,11 +11,11 @@ export const Card = component$<ProjectProps>(({project}) => {
   
   
   return (
-    <div class="max-w-md mx-auto  bg-gradient-to-br bg-zinc-50 rounded-lg shadow-md p-6 my-4 drop-shadow-md hover:border-teal-600 border">
+    <div class=" w-full mx-auto  bg-gradient-to-br bg-zinc-50 rounded-lg shadow-md p-6 my-4 drop-shadow-md hover:border-teal-600 border">
     <details>
       <summary class=" flex">
         <h3 class="text-xl font-semibold text-gray-800 m-0" id={removeSpacesFromID(project.title)}>
-          <a href={`#${removeSpacesFromID(project.title)}`}>
+          <a class=" opacity-0 hover:transition-transform hover:opacity-100" href={`#${removeSpacesFromID(project.title)}`}>
           <span class="header-link">#</span>
           </a>
           {project.title}
@@ -27,8 +27,8 @@ export const Card = component$<ProjectProps>(({project}) => {
       <iFrame src={project.links.live}
         title="iframe Example 1"
         allowFullScreen
-        width="400"
-        height="300"
+        width="600"
+        height="400"
         >
       </iFrame>
 

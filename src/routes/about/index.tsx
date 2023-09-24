@@ -38,7 +38,7 @@ export default component$(() => {
 
   return (
     <section
-      class=" bg-emerald-100 w-full h-full flex flex-col justify-normal  p-10 "
+      class=" bg-slate-50 w-full h-full flex flex-col justify-normal  p-10 "
       id="about"
     >
       <div class="flex justify-start items-start h-fit my-5">

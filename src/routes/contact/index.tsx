@@ -47,7 +47,7 @@ export default component$(() => {
 
   return (
     <section
-      class=" min-h-screen w-screen flex flex-col items-start justify-normal mx-auto  p-7 bg-blue-200"
+      class=" min-h-screen w-screen flex flex-col items-start justify-normal mx-auto  p-7  bg-gray-50"
       id="contact"
     >
       <div class="flex justify-start items-start h-fit my-5">
