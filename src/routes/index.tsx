@@ -15,10 +15,10 @@ export default component$(() => {
 
 
   return (
-    <main class="w-full h-full flex flex-col justify-center items-center">
-      <nav class="grid grid-cols-2 grid-rows-2 w-10/12 h-5/6 place-content-center mx-auto  my-auto p-0 ">
+    <div class="h-screen w-screen flex flex-col justify-center items-center">
+      <nav class="grid grid-cols-2 grid-rows-2 w-10/12 h-5/6 place-content-center mx-auto my-5 p-0 ">
         {routes.map(([key, value], idx) => (
-          <PageLink key={idx} route={key} title={value} />
+          <PageLink key={idx} route={key} title={value}  />
         ))}
       </nav>
       <header
@@ -32,7 +32,7 @@ export default component$(() => {
           descreption="This is a personal website and portfolio of me, Sara Natour, an Electrical Engineer turned full-stack developer. "
         />
       </header>
-    </main>
+    </div>
   );
 });
 
