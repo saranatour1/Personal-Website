@@ -1,6 +1,7 @@
 import { component$, useStylesScoped$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { BackButton } from '~/components/Back Button/back-button';
+import Projects from "./projects.mdx";
 
 export default component$(() => {
 
@@ -28,9 +29,32 @@ export default component$(() => {
   100% { transform: scale(1); }
 }
 `);
+
+const dateNow = new Date("09/24/2023");
   return <section class=" bg-slate-100 w-full min-h-screen flex flex-col justify-normal  p-10 " id='projects'>
-    <BackButton />
-    Page!</section>
+      <div class="flex justify-start items-start h-fit my-5">
+        <BackButton />
+      </div>
+
+      <article class="h-full w-full  bg-inherit bg-emerald-100">
+        <header class="w-full h-20 text-center flex flex-col items-center justify-center">
+          <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
+           Projects and Skills {" "}
+          </h2>
+          <time
+            dateTime={dateNow.toISOString()}
+            class="font-light text-xs text-zinc-500"
+          >
+            Last updated on {dateNow.toLocaleDateString()}
+          </time>
+        </header>
+
+        <section class="h-full bg-inherit bg-emerald-100 prose ">
+          <Projects />
+        </section>
+      </article>
+
+</section>
 });
 
 export const head: DocumentHead = {

@@ -1,0 +1,118 @@
+[
+  {
+    "projects": [
+      {
+        "title": "Image Infinite Scroll",
+        "caption": "A Personal Photo Dump",
+        "affiliatedWith": "Personal",
+        "links": {"github":"https://github.com/saranatour1/SunSet-and-Surise-imageScroller",
+        "live": "https://sun-set-and-surise-image-scroller.vercel.app/"}
+      },
+      {
+        "title": "Travel Designer",
+        "caption": "Travel Designer is a small app where people share their travel ideas or experiences.",
+        "affiliatedWith": "Axsos Academy",
+        "links": {"github":"https://github.com/saranatour1/Traval-Designer"}
+      },
+      {
+        "title": "FeedMe - Wajbat",
+        "caption": "Wajbat is a web application designed to provide restaurants with a dedicated space to gain recognition.",
+        "affiliatedWith": "Axsos Academy",
+        "links": {"github":"https://github.com/saranatour1/FeedMe" }
+      },
+      {
+        "title": "Moods",
+        "caption": "Moods is a platform that connects people together regardless of time differences.",
+        "affiliatedWith": "Axsos Academy",
+        "links": {"github":"https://github.com/saranatour1/Moods"}
+      },
+      {
+        "title": "REST Countries API with color theme switcher",
+        "caption": "A Project created Using Svelte",
+        "affiliatedWith": "Front End Mentor challenges",
+        "links": {
+          "github": "https://github.com/saranatour1/rest-countries",
+          "live": "https://rest-countries-seven-theta.vercel.app/"
+        }
+      },
+      {
+        "title": "Age calculator app",
+        "caption": "An Age calculator app with form validations, created with SolidJs",
+        "affiliatedWith": "Front End Mentor challenges",
+        "links": {
+          "github": "https://github.com/saranatour1/age-calculator",
+          "live": "https://age-calculator-saranatour1.vercel.app/"
+        }
+      },
+      {
+        "title": "Newsletter sign-up with-success-message",
+        "caption": "A News letter sign up Created With Vue",
+        "affiliatedWith": "Front End Mentor challenges",
+        "links": {
+          "github": "https://github.com/saranatour1/newsletter-sign-up-with-success-message-main",
+          "live": "https://newsletter-sign-up-with-success-message-main-psi.vercel.app/"
+        }
+      },
+      {
+        "title": "Time zone Comparison",
+        "caption": "Created with Svelte",
+        "affiliatedWith": "Personal",
+        "links": {
+          "github": "https://github.com/saranatour1/TimeZones-in-Svelte",
+          "live": "https://time-zones-in-svelte.vercel.app/"
+        }
+      },
+      {
+        "title": "Random Advice Generator in svelte",
+        "caption": "A random Advice Generator made with Svelte ",
+        "affiliatedWith": "Front End Mentor challenges",
+        "links": {
+          "github": "https://github.com/saranatour1/Random-Advice-Generator--FEMC",
+          "live": "https://random-advice-blush.vercel.app/"
+        }
+      },
+      {
+        "title": "Ecommerce Product With React + Vite",
+        "caption": "An Eccomerce Product Page made With React + TypeScript + Vite",
+        "affiliatedWith": "Front End Mentor challenges",
+        "links": {
+          "github": "https://github.com/saranatour1/Ecommerce-Product-FEMC",
+          "live": "https://ecommerce-product-psi.vercel.app/"
+        }
+      },
+      {
+        "title": "Chart Expenses",
+        "caption": "Chart Expenses made with Angular",
+        "affiliatedWith": "Front End Mentor challenges",
+        "links": {
+          "github": "https://github.com/saranatour1/Chart-Expenses",
+          "live": "https://chart-expenses.vercel.app/"
+        }
+      },
+      {
+        "title": "Todo App",
+        "caption": "A Simple Todo application that uses the full CRUD operations in Svelte",
+        "affiliatedWith": "Front End Mentor challenges",
+        "links": {
+          "github": "https://github.com/saranatour1/todo-app-FEMC",
+          "live": "https://todo-app-femc.vercel.app/"
+        }
+      }
+
+    ]
+  },
+  {
+    "skills": [
+      { "title": "React", "img": "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+      { "title": "Java Spring boot", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Spring_Boot.svg/1040px-Spring_Boot.svg.png" },
+      { "title": "Django", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Django_logo.svg/640px-Django_logo.svg.png" },
+      { "title": "Flask", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Flask_logo.svg/1060px-Flask_logo.svg.png" },
+      { "title": "NodeJS", "img": "https://upload.wikimedia.org/wikipedia/commons/6/67/NodeJS.png" },
+      { "title": "JavaScript", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png" },
+      { "title": "TypeScript", "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" },
+      { "title": "Java", "img": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/500px-Java_programming_language_logo.svg.png" }
+
+    ]
+  }
+
+]
