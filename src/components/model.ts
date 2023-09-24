@@ -8,6 +8,7 @@
 export interface LinkProps{
   route:string,
   title:string,
+
 }
 
 export interface HeadingProps{

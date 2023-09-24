@@ -1,5 +1,5 @@
 import { component$, Slot } from "@builder.io/qwik";
-import type { RequestHandler } from "@builder.io/qwik-city";
+import { useLocation, type RequestHandler } from "@builder.io/qwik-city";
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
@@ -12,6 +12,16 @@ export const onGet: RequestHandler = async ({ cacheControl }) => {
   });
 };
 
+
+
 export default component$(() => {
-  return <Slot />;
+  const loc = useLocation();
+
+
+  console.log(loc.url.pathname)
+  return (
+    <>
+      <Slot />
+    </>
+  );
 });

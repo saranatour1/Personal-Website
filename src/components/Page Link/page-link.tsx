@@ -11,14 +11,20 @@ import { Link } from "@builder.io/qwik-city";
  * @see {@link https://qwik.builder.io/docs/api/#link} for more information on Qwik Link components.
  */
 
-export const PageLink = component$<LinkProps>(({ title, route }) => {
+export const PageLink = component$<LinkProps>(({ title, route  }) => {
+
+
   return (
+    <div class="flex " >
     <Link
       href={route}
-      class=" font-serif font-medium text-blue-600 dark:text-blue-500 hover:underline focus-visible:ring"
+      class=" font-serif font-medium text-blue-600 dark:text-blue-500 hover:underline focus-visible:ring capitalize"
       title={`go to route ${title}`}
+      onLoad$={(e)=> console.log(e.currentTarget)}
     >
       {title}
     </Link>
+    </div>
+
   );
 });

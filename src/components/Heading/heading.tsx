@@ -8,12 +8,24 @@ import type { HeadingProps } from "../model";
  * @param {string} title - the title of the main heading.
  * @param {string} descreption - some commentary descreption
  * @returns {qwikComponent}
- * 
+ *
  */
 
-export const Heading = component$<HeadingProps>(({ title , descreption }) => {
-  return <hgroup class="flex flex-col flex-grow w-9/12 items-center justify-center mx-auto h-auto">
-    <h1 class=" font-serif text-6xl font-extrabold dark:text-white flex-1 my-3 tracking-wide">{title}</h1>
-    <p class="text-lg  font-serif font-extralight text-center  text-gray-500 dark:text-white flex-1">{descreption} </p>
-  </hgroup>;
+export const Heading = component$<HeadingProps>(({ title, descreption }) => {
+  return (
+    <hgroup class="flex flex-col flex-grow w-9/12  2xl:w-7/12 items-center justify-center mx-auto h-auto ">
+      <h1
+        class=" text-center font-serif text-6xl lg:text-5xl md:text-4xl sm:text-3xl max-sm:text-3xl font-extrabold dark:text-white flex-1 my-3 tracking-wide"
+        aria-labelledby="header-title"
+      >
+        {title}
+      </h1>
+      <p
+        class="text-lg max-sm:text-base  font-serif font-extralight text-center text-gray-950 dark:text-white flex-1"
+        id="header-description"
+      >
+        {descreption}{" "}
+      </p>
+    </hgroup>
+  );
 });
