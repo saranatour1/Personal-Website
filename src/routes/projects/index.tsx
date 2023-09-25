@@ -49,7 +49,7 @@ const dateNow = new Date("09/24/2023");
           </time>
         </header>
 
-        <section class="h-full bg-inherit bg-emerald-100 prose ">
+        <section class="h-full bg-inherit bg-emerald-100 prose 2xl:w-full mt-5 prose-headings:m-0 ">
           <Projects />
         </section>
       </article>

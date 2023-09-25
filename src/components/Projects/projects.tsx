@@ -19,7 +19,7 @@ export const Projects = component$(() => {
   });
 
   return <>
-  {items.value?.map((item ,key)=> <div class="min-w-full" key={key}><Card  project={item}/></div> )}
+  {items.value?.map((item ,key)=> <div class="min-w-screen" key={key}><Card  project={item}/></div> )}
   </> 
     
 
