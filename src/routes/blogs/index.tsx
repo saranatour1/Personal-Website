@@ -1,6 +1,8 @@
 import { component$, useStylesScoped$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 import { BackButton } from '~/components/Back Button/back-button';
+import { BlogCard } from '~/components/Blog Card/blog-card';
+import { Footer } from '~/components/Footer/footer';
 
 export default component$(() => {
   useStylesScoped$(`
@@ -27,11 +29,32 @@ export default component$(() => {
   100% { transform: scale(1); }
 }
 `);
+const dateNow = new Date("09/26/2023");
 
   
-  return <section class=" bg-rose-100 w-full h-full grid place-content-center " id='blogs'>
-    <BackButton />
-    Page!
+  return <section class="  bg-neutral-100 w-full h-full flex flex-col justify-normal p-6  min-h-screen" id='blogs'>
+      <div class="flex justify-start items-start h-fit my-5">
+        <BackButton />
+      </div>
+
+      <article class="h-full w-full  bg-inherit bg-emerald-100">
+        <header class="w-full h-20 text-center flex flex-col items-center justify-center">
+          <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white">
+            Some Stuff I wrote 
+          </h2>
+          <time
+            dateTime={dateNow.toISOString()}
+            class="font-light text-xs text-zinc-500"
+          >
+            Last updated on {dateNow.toLocaleDateString()}
+          </time>
+        </header>
+
+        <section class="h-full bg-inherit bg-emerald-100 prose mx-auto">
+          <BlogCard />
+        </section>
+      </article>
+      <Footer />
     </section>
 });
 
