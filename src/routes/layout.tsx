@@ -1,6 +1,6 @@
 import { component$, Slot} from "@builder.io/qwik";
 import { type RequestHandler } from "@builder.io/qwik-city";
-// import { BackButton } from "~/components/Back Button/back-button";
+
 
 
 export const onGet: RequestHandler = async ({ cacheControl }) => {
@@ -18,6 +18,7 @@ export default component$(() => {
   return (
     <main class=" flex flex-col justify-center items-center font-serif">
       <Slot />
+
     </main>
   );
 });

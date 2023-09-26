@@ -3,6 +3,7 @@ import type { DocumentHead } from "@builder.io/qwik-city";
 import { BackButton } from "~/components/Back Button/back-button";
 
 import { SiGithub, SiLinkedin, SiGmail } from "@qwikest/icons/simpleicons";
+import { Footer } from "~/components/Footer/footer";
 
 export default component$(() => {
   const routes = [
@@ -59,10 +60,11 @@ export default component$(() => {
           <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white ">
             Contact Me
           </h2>
+          <p class=" text-center my-5">Feel free to Contact me on these following Platforms, I am Looking forward to what You have to Say! </p>
         </header>
 
         <section class="w-8/12 h-auto  mx-auto">
-          <address class="flex items-center justify-between">
+          <address class="flex items-center justify-between my-5">
             {routes.map(([key, value], idx) => (
               <a
                 key={idx}
@@ -76,6 +78,7 @@ export default component$(() => {
           </address>
         </section>
       </article>
+      <Footer/>
     </section>
   );
 });

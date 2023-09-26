@@ -1,4 +1,4 @@
-import { component$, useStyles$} from "@builder.io/qwik";
+import { component$, useStyles$ } from "@builder.io/qwik";
 import type { ProjectProps } from "../model";
 
 export const Card = component$<ProjectProps>(({ project }) => {
@@ -12,12 +12,10 @@ export const Card = component$<ProjectProps>(({ project }) => {
     -o-transform-origin: 0 0;
     -webkit-transform: scale(0.75);
     -webkit-transform-origin: 0 0;
-}
+    }
+    }
+  `);
 
-  }
-  
-  `)
-  
   const removeSpacesFromID = (title: string) => {
     return title.split(" ").join("-").toLowerCase();
   };
@@ -50,12 +48,11 @@ export const Card = component$<ProjectProps>(({ project }) => {
           <div class=" inline-flex items-center justify-center w-full">
             <iFrame
               src={project.links.live}
-              title="iframe Example 1"
+              title={`${project.title} live preview, click on live button for better user exprerience`}
               allowFullScreen
               width="100%"
               height="400"
               id="#projectFrame"
-
             ></iFrame>
           </div>
         )}

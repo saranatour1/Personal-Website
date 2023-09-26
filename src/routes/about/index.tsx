@@ -2,6 +2,7 @@ import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { BackButton } from "~/components/Back Button/back-button";
 import AboutMe from "./about.mdx";
+import { Footer } from "~/components/Footer/footer";
 
 /**
  * @todo use rehype plugin to add auto links to the headings
@@ -58,10 +59,12 @@ export default component$(() => {
           </time>
         </header>
 
-        <section class="h-full bg-inherit bg-emerald-100 prose ">
+        <section class="h-full bg-inherit bg-emerald-100 prose mx-auto">
           <AboutMe />
         </section>
+
       </article>
+      <Footer />
     </section>
   );
 });
