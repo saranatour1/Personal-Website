@@ -9,15 +9,15 @@ export default component$(() => {
   const routes = [
     [
       import.meta.env.PUBLIC_GIT_HUB,
-      <SiGithub key={3} class="text-lg w-10 h-10" />,
+      <SiGithub key={3} class="text-lg w-16 h-16" />,
     ],
     [
       import.meta.env.PUBLIC_lINKED_IN,
-      <SiLinkedin key={4} class="text-lg w-10 h-10" />,
+      <SiLinkedin key={4} class="text-lg w-16 h-16" />,
     ],
     [
       import.meta.env.PUBLIC_EMAIL,
-      <SiGmail key={5} class="text-lg w-10 h-10" />,
+      <SiGmail key={5} class="text-lg w-16 h-16" />,
     ],
   ];
 
@@ -63,14 +63,14 @@ export default component$(() => {
           <p class=" text-center my-5">Feel free to Contact me on these following Platforms, I am Looking forward to what You have to Say! </p>
         </header>
 
-        <section class="w-8/12 h-auto  mx-auto">
-          <address class="flex items-center justify-between my-5">
+        <section class="w-8/12 h-full  mx-auto">
+          <address class="flex items-center justify-between my-7  max-md:flex-col max-sm:flex-col ">
             {routes.map(([key, value], idx) => (
               <a
                 key={idx}
                 href={key}
                 target="_blank"
-                class=" text-lg hover:cursor-pointer"
+                class=" text-lg hover:cursor-pointer max-sm:mt-4 max-md:mt-4"
               >
                 {value}
               </a>
