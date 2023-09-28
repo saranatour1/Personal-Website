@@ -13,3 +13,8 @@ Out of a desire to experiment and pure curiosity, I am creating the same website
 
 ### Todo:
 - Start?
+
+### Versions: 
+- April : Django (pure Html,css, javascript)
+- june: Astro & Svelte
+- September: Qwik :fire:
