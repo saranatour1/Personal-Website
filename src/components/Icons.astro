@@ -1,0 +1,44 @@
+---
+import {Icon} from 'astro-icon'
+const Email= import.meta.env.Email;
+const routes = [["https://www.linkedin.com/in/saranatour/","mdi:linkedin"],
+                ["https://github.com/saranatour1","mdi:github"],
+                [`mailto:${Email}`,"mdi:gmail"]];
+
+---
+<script>
+  const links = document.querySelectorAll("a");
+
+  //The code is adding a click event listener to each element with the class "link" in the HTML document.
+  links.forEach((link)=>{
+    link.addEventListener("touchstart" , ()=> goToPage(link.href))
+  })
+
+// The `goToPage` function is a JavaScript function that is called when a link is clicked. It takes the `href` parameter, which represents the URL of the link that was clicked.
+  const goToPage = (href)=>{
+    if(confirm(`are you sure you want to leave to ${href}?`)){
+      return window.open(href, "_blank")?.focus();
+    }
+  } 
+
+</script>
+
+  <div class="flex justify-evenly w-16 items-end h-20" >
+    {routes.map(([key,value],idx)=> (
+         <a href={key}> <span hidden>{key}</span><Icon name={value} /></a> 
+    ))}
+  </div>
+
+<style lang="css">
+  [astro-icon] {
+      color: rgb(15 23 42);
+
+      fill: blue;
+      width: 4.5rem;
+  }
+  [astro-icon="annotation"] {
+      color: red;
+      /* OR */
+      fill: red;
+  }
+</style>
