@@ -1,31 +1,49 @@
 {
-  "name": "portfolio",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+  "name": "my-qwik-empty-starter",
+  "description": "App with Routing built-in ready to create your app",
+  "engines": {
+    "node": ">=15.0.0"
   },
-  "dependencies": {
-    "@astrojs/mdx": "^0.19.7",
-    "@astrojs/svelte": "^3.1.1",
-    "@astrojs/tailwind": "^4.0.0",
-    "astro": "^2.10.15",
-    "astro-icon": "^0.8.1",
-    "astro-robots-txt": "^0.5.0",
-    "hast-util-to-string": "^2.0.0",
-    "hastscript": "^8.0.0",
-    "rehype-autolink-headings": "^6.1.1",
-    "rehype-slug": "^5.1.0",
-    "remark-toc": "^8.0.1",
-    "svelte": "^4.2.0",
-    "tailwindcss": "^3.3.3"
+  "private": true,
+  "trustedDependencies": [
+    "sharp"
+  ],
+  "scripts": {
+    "build": "qwik build",
+    "build.client": "vite build",
+    "build.preview": "vite build --ssr src/entry.preview.tsx",
+    "build.types": "tsc --incremental --noEmit",
+    "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
+    "dev": "vite --mode ssr",
+    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
+    "fmt": "prettier --write .",
+    "fmt.check": "prettier --check .",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "preview": "qwik build preview && vite preview --open",
+    "start": "vite --open --mode ssr",
+    "qwik": "qwik"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
-    "svelte-typewriter": "^3.1.6"
+    "@builder.io/partytown": "^0.8.0",
+    "@builder.io/qwik": "^1.2.12",
+    "@builder.io/qwik-city": "^1.2.12",
+    "@types/eslint": "8.44.1",
+    "@types/node": "^20.7.1",
+    "@typescript-eslint/eslint-plugin": "6.2.0",
+    "@typescript-eslint/parser": "6.2.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "8.45.0",
+    "eslint-plugin-qwik": "^1.2.12",
+    "postcss": "^8.4.30",
+    "prettier": "3.0.0",
+    "tailwindcss": "^3.3.3",
+    "typescript": "5.1.6",
+    "undici": "5.22.1",
+    "vite": "4.4.7",
+    "vite-tsconfig-paths": "4.2.0"
+  },
+  "dependencies": {
+    "@qwikest/icons": "^0.0.8",
+    "@tailwindcss/typography": "^0.5.10"
   }
 }

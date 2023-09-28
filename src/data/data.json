@@ -113,12 +113,6 @@
       { "title": "Java", "img": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/500px-Java_programming_language_logo.svg.png" }
 
     ]
-  },
-  {
-    "contact": {
-      "title": "LinkedIn",
-      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png",
-      "links":"https://www.linkedin.com/in/saranatour/"
-    }
   }
+
 ]

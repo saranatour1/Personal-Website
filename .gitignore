@@ -1,22 +1,43 @@
-# build output
-dist/
+# Build
+/dist
+/lib
+/lib-types
+/server
 
-# generated types
-.astro/
+# Development
+node_modules
+*.local
 
-# dependencies
-node_modules/
+# Cache
+.cache
+.mf
+.rollup.cache
+tsconfig.tsbuildinfo
 
-# logs
+# Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+lerna-debug.log*
 
-# environment variables
-.env
-.env.production
+# Editor
+.vscode/*
+!.vscode/launch.json
+!.vscode/*.code-snippets
 
-# macOS-specific files
+.idea
 .DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Yarn
+.yarn/*
+!.yarn/releases
+# enviromental variable 
 *.env
