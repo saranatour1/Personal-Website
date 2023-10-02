@@ -5,7 +5,7 @@ export function useScreenWidth() {
   useOnWindow(
     'resize',
     $((e) => {
-      innerWidth.value = e.target.innerWidth;
+      innerWidth.value = (e.target as EventTarget).innerWidth;
     })
   );
   return innerWidth;

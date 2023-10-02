@@ -4,10 +4,10 @@ import { BackButton } from "~/components/Back Button/back-button";
 
 import { SiGithub, SiLinkedin, SiGmail } from "@qwikest/icons/simpleicons";
 import { Footer } from "~/components/Footer/footer";
-import { useScreenWidth } from "~/Custom hooks/useScreenWidth";
+
 
 export default component$(() => {
-  const screenSize = useScreenWidth();
+  // const screenSize = useScreenWidth();
   const routes = [
     [
       import.meta.env.PUBLIC_GIT_HUB,
