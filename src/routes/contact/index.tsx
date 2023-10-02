@@ -1,4 +1,4 @@
-import { component$, useStylesScoped$, useTask$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { BackButton } from "~/components/Back Button/back-button";
 
@@ -7,7 +7,7 @@ import { Footer } from "~/components/Footer/footer";
 
 
 export default component$(() => {
-  // const screenSize = useScreenWidth();
+
   const routes = [
     [
       import.meta.env.PUBLIC_GIT_HUB,
@@ -48,10 +48,7 @@ export default component$(() => {
 }
 `);
 
-useTask$(async () => {
-  // A task without `track` any state effectively behaves like a `on mount` hook.
-  console.log('Runs once when the component mounts in the server OR client.' , screen.availWidth);
-});
+
 
   return (
     <section
@@ -62,22 +59,22 @@ useTask$(async () => {
         <BackButton />
       </div>
 
-      <article class="h-full w-full">
-        <header class="w-full h-20 text-center flex flex-col items-center justify-center">
+      <article class="h-auto w-full">
+        <header class="w-full h-20 text-center flex flex-col items-center justify-center mb-20">
           <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white ">
             Contact Me
           </h2>
           <p class=" text-center my-5">Feel free to Contact me on these following Platforms, I am Looking forward to what You have to Say! </p>
         </header>
 
-        <section class="w-8/12 h-full  mx-auto">
-          <address class="flex items-center justify-between my-7  max-md:flex-col max-sm:flex-col ">
+        <section class="w-8/12 h-auto  mx-auto flex md:flex-col items-center justify-between">
+          <address class="flex w-full h-auto items-center justify-between my-7  max-md:flex-col max-sm:flex-col  ">
             {routes.map(([key, value], idx) => (
               <a
                 key={idx}
                 href={key}
                 target="_blank"
-                class=" text-lg hover:cursor-pointer max-sm:mt-4 max-md:mt-4"
+                class=" text-lg   hover:cursor-pointer max-sm:mt-4 max-md:mt-4"
               >
                 {value}
               </a>
