@@ -1,11 +1,13 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import { component$, useStylesScoped$, useTask$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
 import { BackButton } from "~/components/Back Button/back-button";
 
 import { SiGithub, SiLinkedin, SiGmail } from "@qwikest/icons/simpleicons";
 import { Footer } from "~/components/Footer/footer";
+import { useScreenWidth } from "~/Custom hooks/useScreenWidth";
 
 export default component$(() => {
+  const screenSize = useScreenWidth();
   const routes = [
     [
       import.meta.env.PUBLIC_GIT_HUB,
@@ -45,6 +47,11 @@ export default component$(() => {
   100% { transform: scale(1); }
 }
 `);
+
+useTask$(async () => {
+  // A task without `track` any state effectively behaves like a `on mount` hook.
+  console.log('Runs once when the component mounts in the server OR client.' , screen.availWidth);
+});
 
   return (
     <section
