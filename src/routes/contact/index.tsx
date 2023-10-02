@@ -5,7 +5,9 @@ import { BackButton } from "~/components/Back Button/back-button";
 import { SiGithub, SiLinkedin, SiGmail } from "@qwikest/icons/simpleicons";
 import { Footer } from "~/components/Footer/footer";
 
+
 export default component$(() => {
+
   const routes = [
     [
       import.meta.env.PUBLIC_GIT_HUB,
@@ -46,6 +48,8 @@ export default component$(() => {
 }
 `);
 
+
+
   return (
     <section
       class=" min-h-screen w-screen flex flex-col items-start justify-normal mx-auto  p-7  bg-gray-50"
@@ -55,22 +59,22 @@ export default component$(() => {
         <BackButton />
       </div>
 
-      <article class="h-full w-full">
-        <header class="w-full h-20 text-center flex flex-col items-center justify-center">
+      <article class="h-auto w-full">
+        <header class="w-full h-20 text-center flex flex-col items-center justify-center mb-20">
           <h2 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-4xl lg:text-4xl dark:text-white ">
             Contact Me
           </h2>
           <p class=" text-center my-5">Feel free to Contact me on these following Platforms, I am Looking forward to what You have to Say! </p>
         </header>
 
-        <section class="w-8/12 h-full  mx-auto">
-          <address class="flex items-center justify-between my-7  max-md:flex-col max-sm:flex-col ">
+        <section class="w-8/12 h-auto  mx-auto flex md:flex-col items-center justify-between">
+          <address class="flex w-full h-auto items-center justify-between my-7  max-md:flex-col max-sm:flex-col  ">
             {routes.map(([key, value], idx) => (
               <a
                 key={idx}
                 href={key}
                 target="_blank"
-                class=" text-lg hover:cursor-pointer max-sm:mt-4 max-md:mt-4"
+                class=" text-lg   hover:cursor-pointer max-sm:mt-4 max-md:mt-4"
               >
                 {value}
               </a>
