@@ -15,5 +15,8 @@
     "astro": "^3.6.4",
     "tailwindcss": "^3.0.24",
     "typescript": "^5.3.2"
+  },
+  "devDependencies": {
+    "@types/gtag.js": "^0.0.18"
   }
 }
