@@ -1,10 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Title from '../components/Title.astro'
+import TileSection from '../components/TileSection.astro';
 ---
 
 <Layout title="Personal website">
 	<Title />
+	<!-- minimal Projects section -->
+	<TileSection title="projects" path="/work"/>
 </Layout>
 
 <style>

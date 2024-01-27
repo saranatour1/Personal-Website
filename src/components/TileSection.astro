@@ -1,0 +1,17 @@
+---
+  const {title, path} = Astro.props;
+---
+
+<div class=" flex justify-between items-center w-full max-w-[64rem] mt-44 mx-auto">
+    <h3 class=" flex justify-center items-center gap-4"> 
+      <span class=" font-code font-bold gap-0 whitespace-pre-line">
+        <span class=" text-tag-purple text-3xl">#</span> 
+        <span class=" text-white text-3xl">  {title}</span>
+      </span>
+
+      <svg xmlns="http://www.w3.org/2000/svg" width="511" height="2" viewBox="0 0 511 2" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M511 1.5H0V0.5H511V1.5Z" fill="#C778DD"/>
+      </svg>
+    </h3>
+  <a class=" text-base text-white font-code font-medium" href={path}>view all ~~></a>
+</div>
