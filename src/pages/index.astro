@@ -4,6 +4,7 @@ import Title from "../components/Title.astro";
 import TileSection from "../components/TileSection.astro";
 import Card from "../components/Card.astro";
 import { Octokit } from "octokit";
+import SkillCard from "../components/SkillCard.astro";
 const token = import.meta.env.TOKEN;
 const mainRepos = ["Moods", "FeedMe", "Traval-Designer"];
 
@@ -24,6 +25,17 @@ const responses = await Promise.all(
     return response.data;
   })
 );
+
+const skills = [
+  { databases: ['MySQL', 'SQLite', 'PostgreSQL', 'MongoDB'] },
+  { frameworks: [  'Spring Boot', 'Django', 'Flask', 'React', 'Svelte', 'Vue', 'Next',
+  'Node.js', 'Express.js', 'Tailwind', 'Bootstrap'] },
+  { tools: ['Git', 'GitHub'] },
+  { other: ['AWS', 'Vercel'] },
+  { languages: ['JavaScript', 'TypeScript', 'Python', 'Java', 'HTML5', 'CSS3'] },
+]
+
+
 
 ---
 
@@ -47,6 +59,14 @@ const responses = await Promise.all(
   </div>
 
   <TileSection title="skills" path="/about#skills" />
+  <div class="w-full max-w-[64rem] mx-auto flex">
+    <div class="grid gap-4 grid-cols-3  py-8 ml-auto max-w-[30rem] w-full -scale-100 scale-y-100">
+      {skills.map((item) => (
+        <SkillCard title={Object.keys(item)[0]} data={Object.values(item)} />
+      ))}
+      <!--  -->
+    </div>
+  </div>
   
 
 </Layout>
