@@ -1,15 +1,52 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Title from '../components/Title.astro'
-import TileSection from '../components/TileSection.astro';
+import Layout from "../layouts/Layout.astro";
+import Title from "../components/Title.astro";
+import TileSection from "../components/TileSection.astro";
+import Card from "../components/Card.astro";
+import { Octokit } from "octokit";
+const token = import.meta.env.TOKEN;
+const mainRepos = ["Moods", "FeedMe", "Traval-Designer"];
+
+const octokit = new Octokit({
+  auth: token,
+});
+
+const responses = await Promise.all(
+  mainRepos.map(async (repo) => {
+    const response = await octokit.request("GET /repos/saranatour1/" + repo, {
+      owner: "saranatour1",
+      repo: repo,
+      headers: {
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    });
+
+    return response.data;
+  })
+);
+
 ---
 
 <Layout title="Personal website">
-	<Title />
-	<!-- minimal Projects section -->
-	<TileSection title="projects" path="/work"/>
+  <Title />
+  <!-- minimal Projects section -->
+  <TileSection title="projects" path="/work" />
+  <div class="flex items-center justify-between w-full max-w-[64rem] mx-auto mt-4">
+    {
+      responses.map((item) => (
+        <Card
+          title={item.name}
+          body={item.description}
+          href={item.html_url}
+          live={item.homepage}
+          repostory={item.html_url}
+          topics={item.topics}
+        />
+      ))
+    }
+  </div>
+
+  <TileSection title="skills" path="/about#skills" />
+  
+
 </Layout>
-
-<style>
-
-</style>
