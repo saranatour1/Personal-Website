@@ -4,9 +4,10 @@ interface Props {
   data: string[][];
 }
 const { title, data } = Astro.props;
+const pathname = new URL(Astro.request.url).pathname;
 ---
 
-<div class="w-full max-w-[11.125rem] border border-base-grey -scale-x-100">
+<div class={`w-full max-w-[11.125rem] border border-base-grey  ${pathname === '/' && '-scale-x-100' }`} >
   <div class="border-b border-base-grey flex justify-start items-center w-full p-2">
     <h3 class="font-code font-medium text-base text-white capitalize">{title}</h3>
   </div>

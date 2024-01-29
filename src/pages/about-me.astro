@@ -1,0 +1,61 @@
+---
+import MainTitle from "../components/MainTitle.astro";
+import About from "../components/About.astro";
+import Layout from "../layouts/Layout.astro";
+import TileSection from "../components/TileSection.astro";
+import SkillCard from "../components/SkillCard.astro";
+
+const skills = [
+  { databases: ["MySQL", "SQLite", "PostgreSQL", "MongoDB"] },
+  {
+    frameworks: [
+      "Spring Boot",
+      "Django",
+      "Flask",
+      "React",
+      "Svelte",
+      "Vue",
+      "Next",
+      "Node.js",
+      "Express.js",
+      "Tailwind",
+      "Bootstrap",
+    ],
+  },
+  { tools: ["Git", "GitHub"] },
+  { other: ["AWS", "Vercel"] },
+  { languages: ["JavaScript", "TypeScript", "Python", "Java", "HTML5", "CSS3"] },
+];
+
+const aboutMeArray = [
+  "I like watching documentaries",
+  "I like all types of food, and I have no favorite!",
+  "If I had the money, I’d travel the world right now!",
+  "I like puzzles, especially those with 500+ pieces.",
+  "There’s a secret message here, if you find it you’ll win absolutely nothing, but let me know if you find it!",
+];
+---
+
+<Layout title="about me">
+  <main class="w-full max-w-[64rem] mx-auto p-8 self-start">
+    <MainTitle title="about-me" desc="biography" />
+    <About />
+    <TileSection title="skills" />
+
+    <div class="grid grid-cols-5 my-8">
+      {skills.map((item) => <SkillCard title={Object.keys(item)[0]} data={Object.values(item)} />)}
+    </div>
+
+    <TileSection title="facts" />
+
+    <div class="flex flex-col justify-between items-start gap-y-4 my-4">
+      <blockquote class="text-xl italic text-white font-code">
+        <p>"here are a few things that I’d like to give you as second hand knowledge about me:"</p>
+      </blockquote>
+
+      <ul class="max-w-xl w-full space-y-1 text-white list-disc list-outside ml-2 font-code my-4 font-normal">
+        {aboutMeArray.map((one) => <li class=" text-base">{one}</li>)}
+      </ul>
+    </div>
+  </main>
+</Layout>
