@@ -11,6 +11,8 @@ interface Props {
 }
 
 const { href, title, body, live, repostory, topics } = Astro.props;
+
+const pathname = new URL(Astro.request.url).pathname;
 ---
 
 <li class="link-card w-full h-full flex-[0.3] flex-col border border-white">
@@ -23,9 +25,9 @@ const { href, title, body, live, repostory, topics } = Astro.props;
       {body}
     </p>
   </a>
-	<!-- <div class="pl-6 flex justify-around items-center w-full h-auto">
-		{topics && topics.splice(0,2).map(topic => <span class="font-code font-normal border border-base-grey rounded-full py-2 px-3 text-white hover:text-tag-purple">{topic}</span>)} ...
-	</div> -->
+<!-- {pathname !== '/' &&	<div class=" flex justify-around items-center w-full h-auto flex-wrap">
+		{topics && topics.map(topic => <span class="font-code font-normal  text-white hover:text-tag-purple">{topic}</span>)} ...
+	</div>} -->
   <div class="w-full h-auto flex items-center justify-around p-4">
     {live && <Link path={live}>{`Live <~>`}</Link>}
 	{ repostory &&<Link path={repostory}>
