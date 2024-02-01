@@ -1,71 +1,51 @@
 ---
-import Link from "./Link.astro";
-
-interface Props {
-  title: string;
-  body: string;
-  href: string;
-  live: string;
-  repostory: string;
-	topics:string[];
-}
-
-const { href, title, body, live, repostory, topics } = Astro.props;
-
-const pathname = new URL(Astro.request.url).pathname;
+  import LandMark from "./Icons/LandMark.astro";
 ---
 
-<li class="link-card w-full h-full flex-[0.3] flex-col border border-white">
-  <a href={href}>
-    <h2 class=" font-code text-2xl">
-      {title}
-      <span>&rarr;</span>
-    </h2>
-    <p class=" font-code w-full tracking-normal break-words break-all mt-4">
-      {body}
-    </p>
-  </a>
-<!-- {pathname !== '/' &&	<div class=" flex justify-around items-center w-full h-auto flex-wrap">
-		{topics && topics.map(topic => <span class="font-code font-normal  text-white hover:text-tag-purple">{topic}</span>)} ...
-	</div>} -->
-  <div class="w-full h-auto flex items-center justify-around p-4">
-    {live && <Link path={live}>{`Live <~>`}</Link>}
-	{ repostory &&<Link path={repostory}>
-      {`repository`}
-    </Link>}
-  </div>
-</li>
-<style>
-  .link-card {
-    list-style: none;
-    display: flex;
-    padding: 1px;
-    background-image: none;
-    background-size: 400%;
-    background-position: 100%;
-    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-  }
-  .link-card > a {
-    width: 100%;
-    text-decoration: none;
-    line-height: 1.4;
-    padding: calc(1.5rem - 1px);
-    border-radius: 8px;
-    color: white;
-    opacity: 0.8;
-  }
-  h2 {
-    margin: 0;
-    font-size: 1.25rem;
-    transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+<script>
+  const timeDisplay = document.getElementById('time-display');
+  let timeInterval;
+
+  function updateCurrentTime() {
+    let currentTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jerusalem' });
+    timeDisplay.textContent = currentTime;
+    timeInterval = setInterval(() => {
+      currentTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jerusalem' });
+      timeDisplay.textContent = currentTime;
+    }, 1000);
   }
 
-  .link-card:is(:hover, :focus-within) {
-    background-position: 0;
-    background-image: var(--accent-gradient);
+  function clearTimeInterval() {
+    clearInterval(timeInterval);
   }
-  .link-card:is(:hover, :focus-within) h2 {
-    color: rgb(var(--accent-light));
-  }
-</style>
+
+  window.addEventListener('DOMContentLoaded', updateCurrentTime);
+  window.addEventListener('beforeunload', clearTimeInterval);
+</script>
+
+<div class=" w-full h-auto max-w-[30rem] max-md:max-md-[calc(100%-1rem)] max-sm:max-w-[calc(100%-4rem)] p-12 border border-gray-400 rounded-lg flex flex-col justify-start gap-y-2 items-start bg-slate-50/5">
+  <div class="flex items-center justify-between w-full max-md:flex-col  max-md:items-start">
+    <span class=" block">
+      <h1 class=" text-3xl font-medium">Sara Natour</h1>
+      <small class=" text-sm"> Developer & Engineer</small>
+    </span>
+    <span class=" flex flex-col justify-start items-start">
+      <span class=" flex items-center justify-between">
+        <LandMark /> <span class="pt-2"> Palestine</span> <span  class=" sr-only">I am currently located in Palestine.</span>
+      </span>
+      <span  class="block" id="time-display" />
+    </span>
+  </div>
+  <p class="text-sm text-slate-950 ">
+    <span>
+      Hi, I'm Sara – no 'H' at the end. <br /> I'm a web developer with an electrical engineering background. I enjoy building
+      things on both the front and back ends, taking on challenges, and turning my ideas into real projects, whether they're
+      small or big.
+    </span>
+    <span>
+      Even though I've been in the industry for a short time, I've learned a lot and created some cool stuff. I like
+      working with JavaScript frameworks like Vue and Astro, but I'm open to trying out different technologies. I'm a
+      quick learner and always curious to learn more and get involved in projects.
+    </span>
+  </p>
+</div>
