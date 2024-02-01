@@ -1,27 +1,31 @@
 ---
   import LandMark from "./Icons/LandMark.astro";
 ---
+<script defer>
+  document.addEventListener('DOMContentLoaded', () => {
+    const timeDisplay = document.getElementById('time-display');
+    let timeInterval;
 
-<script lang="ts">
-  const timeDisplay = document.getElementById('time-display');
-  let timeInterval;
+    function updateCurrentTime() {
+      let currentTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jerusalem' });
+      if (timeDisplay) {
+        timeDisplay.textContent = currentTime;
+        timeInterval = setInterval(() => {
+          currentTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jerusalem' });
+          timeDisplay.innerHTML = `${currentTime}`;
+        }, 1000);
+      }
+    }
 
-  function updateCurrentTime() {
-    let currentTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jerusalem' });
-    timeDisplay.textContent = currentTime;
-    timeInterval = setInterval(() => {
-      currentTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jerusalem' });
-      timeDisplay.textContent = currentTime;
-    }, 1000);
-  }
+    function clearTimeInterval() {
+      clearInterval(timeInterval);
+    }
 
-  function clearTimeInterval() {
-    clearInterval(timeInterval);
-  }
-
-  window.addEventListener('DOMContentLoaded', updateCurrentTime);
-  window.addEventListener('beforeunload', clearTimeInterval);
+    updateCurrentTime();
+    document.addEventListener('beforeunload', clearTimeInterval);
+  });
 </script>
+
 
 <div class=" w-full h-auto max-w-[30rem] max-md:max-md-[calc(100%-1rem)] max-sm:max-w-[calc(100%-4rem)] p-12 border border-gray-400 rounded-lg flex flex-col justify-start gap-y-2 items-start bg-slate-50/5">
   <div class="flex items-center justify-between w-full max-md:flex-col  max-md:items-start">
