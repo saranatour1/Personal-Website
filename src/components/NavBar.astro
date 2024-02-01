@@ -1,0 +1,24 @@
+---
+const routes = [
+  ["home", "/"],
+  ["projects", "/work"],
+  ["about", "/about-me"],
+  ["contact", "/contact"],
+];
+const pathname = new URL(Astro.request.url).pathname;
+---
+
+<nav class="mt-8 mb-2 w-full h-full max-w-[32rem] flex items-center justify-between mx-auto">
+  {routes.map(([routeName, path]) => (
+      <a class=" font-code text-white align-baseline  font-base" href={path}>
+        <span class=" text-tag-purple font-normal text-base font-code">#</span>{" "}
+        <span
+          class={`capitalize  hover:text-tag-purple transition-colors ${
+            path !== pathname ? "text-base-grey" : "text-white"
+          }`}
+        >
+          {routeName}
+        </span>
+      </a>
+    ))}
+</nav>

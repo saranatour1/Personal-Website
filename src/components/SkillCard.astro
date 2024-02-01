@@ -1,0 +1,23 @@
+---
+interface Props {
+  title: string;
+  data: string[][];
+}
+const { title, data } = Astro.props;
+const pathname = new URL(Astro.request.url).pathname;
+---
+
+<div class={`w-full max-w-[11.125rem] border border-base-grey  ${pathname === '/' && '-scale-x-100' }`} >
+  <div class="border-b border-base-grey flex justify-start items-center w-full p-2">
+    <h3 class="font-code font-medium text-base text-white capitalize">{title}</h3>
+  </div>
+  <div class="p-2 w-full flex justify-start items-center gap-2 flex-wrap break-words">
+    {
+      data[0].length > 3
+        ? data[0]
+            .splice(0, 2)
+            .map((skill) => <span class="font-code text-sm text-base-grey font-normal ">{skill}</span>)
+        : data[0].map((skill) => <span class="font-code text-sm text-base-grey font-normal ">{skill}</span>)
+    }
+  </div>
+</div>
