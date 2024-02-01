@@ -6,8 +6,8 @@ import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import Layout from '../layouts/Layout.astro';
 ---
-<Layout>
-		<main class="w-full h-screen max-w-full min-h-[70%]   flex flex-col items-center justify-center">
-			<Card/>
+<Layout title={SITE_TITLE} descreption={SITE_DESCRIPTION}>
+		<main class="w-full h-screen max-w-full min-h-[70%] flex flex-col items-center justify-center">
+			<Card />
 		</main>
 </Layout>
