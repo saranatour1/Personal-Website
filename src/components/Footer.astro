@@ -1,0 +1,41 @@
+---
+import { socialLinks } from "../consts";
+import Github from "./Icons/Github.astro";
+import Email  from "./Icons/Email.astro";
+import LinkedIn from "./Icons/LinkedIn.astro";
+const today = new Date();
+---
+
+<footer class="  justify-self-end">
+	 Copyright {today.getFullYear()}. Made by Sara
+	<div class="social-links" >
+		{socialLinks.map(link =>(
+			<a href={link} target="_blank" class=" cursor-pointer">
+				{link.includes('github') && (<span class="sr-only">Follow me on github</span> <Github />)}
+				{link.includes('linkedin') && (<span class="sr-only">Follow me on linkedin</span> <LinkedIn />)}
+				{link.includes('@') && (<span class="sr-only">Email me </span> <Email />)}
+		</a>
+		))}
+	</div>
+</footer>
+<style>
+	footer {
+		padding: 2em 1em 2em 1em;
+		background: linear-gradient(var(--gray-gradient)) no-repeat;
+		color: rgb(var(--gray));
+		text-align: center;
+	}
+	.social-links {
+		display: flex;
+		justify-content: center;
+		gap: 1em;
+		margin-top: 1em;
+	}
+	.social-links a {
+		text-decoration: none;
+		color: rgb(var(--gray));
+	}
+	.social-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+</style>
