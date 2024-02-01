@@ -12,7 +12,7 @@
         timeDisplay.textContent = currentTime;
         timeInterval = setInterval(() => {
           currentTime = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jerusalem' });
-          timeDisplay.innerHTML = `${currentTime}`;
+          timeDisplay.textContent = `${currentTime}`;
         }, 1000);
       }
     }
@@ -33,7 +33,7 @@
       <h1 class=" text-3xl font-medium">Sara Natour</h1>
       <small class=" text-sm"> Developer & Engineer</small>
     </span>
-    <span class=" flex flex-col justify-start items-start">
+    <span class=" flex flex-col justify-end items-end">
       <span class=" flex items-center justify-between">
         <LandMark /> <span class="pt-2"> Palestine</span> <span  class=" sr-only">I am currently located in Palestine.</span>
       </span>
