@@ -23,8 +23,6 @@ body::before {
   z-index: -2;
   height: 500px;
   width: 500px;
-  position: relative;
-  right: 5em;
 }
 
 
