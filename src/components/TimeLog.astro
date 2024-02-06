@@ -1,0 +1,25 @@
+---
+  const layers = [{title:"Portfolio With Astro",descreption:"A fun, plasmic experiment with Astro.",date:"", link:"https://www.saranatour.dev/"},{title:"1992",descreption:"Hello"},{title:"1992",descreption:"Hello"}];
+
+---
+<div class="flex flex-col justify-center items-center gap-y-6">
+    <h3 class="text-center text-2xl font-bold capitalize">changelog</h3>
+  <div class="w-full max-w-full h-auto flex flex-col justify-center items-center gap-x-16 p-4">
+    {layers.map(k => (
+      <a href={k.link}>
+      <div class="p-5 border-l relative w-full">
+        <div class=" pl-16 flex flex-col h-full w-full max-w-full justify-start items-start">
+          <h1 class=" font-semibold text-lg">{k.title}</h1>
+        <p class=" text-base text-green-950">
+          {k.descreption}
+          </p>
+          </div>
+          <div class=" absolute border-b w-1/12 h-1 bottom-0 left-0"></div>
+          <div class=" absolute bottom-0 left-4">
+            <time datetime="20:00">20:00</time></div>
+      </div>
+    </a>
+    ))}
+  </div>
+
+</div>
