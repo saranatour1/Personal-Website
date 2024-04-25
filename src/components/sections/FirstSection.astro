@@ -1,0 +1,21 @@
+---
+import CardWrapper from "../CardWrapper.astro";
+import Smily from "../Icons/Smily.astro";
+import Heart from '../Icons/Heart.astro';
+import Sparkles from '../Icons/Sparkeles.astro';
+---
+<section class="w-full max-w-[50rem]">
+  <CardWrapper className="flex justify-between items-center w-full max-md:flex-col">
+    <div class="flex flex-col justify-start items-start w-full">
+      <h1 class="text-7xl text-black-1">
+        Sara Natour
+      </h1>
+      <span class="text-black-1">Full-stack developer x Electrical Engineer</span>
+    </div>
+    <div class="relative w-full h-full min-h-[10rem] flex justify-center items-center">
+      <Smily class="absolute top-0 left-0 translate-x-1/2"/>
+      <Heart class="absolute scale-50 right-0 top-0 rotate-12"/>
+      <Heart class="absolute scale-50 bottom-0 left-0 -rotate-12"/>
+    </div>
+  </CardWrapper>
+</section>

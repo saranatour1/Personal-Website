@@ -1,9 +1,16 @@
 ---
-import Card from "../components/Card.astro";
+import FirstSection from "../components/sections/FirstSection.astro";
+import OverView from "../components/sections/OverView.astro";
+import Projects from "../components/sections/Projects.astro";
+import Skills from "../components/sections/Skills.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Layout from "../layouts/Layout.astro";
 ---
-
 <Layout title={SITE_TITLE} descreption={SITE_DESCRIPTION}>
-  <Card />
+  <main class="cards">
+    <FirstSection />
+    <OverView />
+    <Skills />
+    <Projects />
+  </main>
 </Layout>
