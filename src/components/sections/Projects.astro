@@ -1,0 +1,57 @@
+---
+import { Octokit } from "@octokit/core";
+import CardWrapper from "../CardWrapper.astro";
+
+interface ProjectType {
+  name: string;
+  description: string;
+  url: string;
+}
+const query = `
+  query {
+    user(login: "saranatour1") {
+      pinnedItems(first: 6, types: REPOSITORY) {
+        nodes {
+          ... on Repository {
+            name
+            description
+            url
+          }
+        }
+      }
+    }
+  }
+`;
+
+const octokit = new Octokit({
+  auth: import.meta.env.GITHUB_TOKEN,
+});
+
+const response = await octokit.graphql(query, {
+  baseUrl: "https://api.github.com",
+  headers: {
+    authorization: `token ${import.meta.env.GITHUB_TOKEN}`,
+  },
+});
+
+const pinnedItems: ProjectType[] = (response as any).user.pinnedItems.nodes;
+---
+
+<section class="mt-4 w-full max-w-[50rem]">
+  {!pinnedItems && <span>loading</span>}
+  <CardWrapper>
+    <h3 class="mb-4 text-2xl font-bold">Cool things</h3>
+    <div class="grid grid-cols-2 grid-rows-1 gap-10 max-md:grid-cols-1">
+      {
+        pinnedItems.map((item) => (
+          <CardWrapper className="w-full border-blue-1/40 hover:border-blue-1 transition-colors cursor-pointer max-md:col-span-1">
+            <a href={item.url} target="_blank" class="flex flex-col items-start justify-start gap-4">
+              <span class="text-lg font-bold before:content-['#'] before:mr-1 before:text-yellow-700 ">{item.name}</span>
+              <span class="text-sm  text-black-1/80">{item.description}</span>
+            </a>
+          </CardWrapper>
+        ))
+      }
+    </div>
+  </CardWrapper>
+</section>
