@@ -40,7 +40,7 @@ const pinnedItems: ProjectType[] = (response as any).user.pinnedItems.nodes;
 <section class="mt-4 w-full max-w-[50rem]">
   {!pinnedItems && <span>loading</span>}
   <CardWrapper>
-    <h3 class="mb-4 text-2xl font-bold">Cool things</h3>
+    <h2 class="text-2xl font-bold leading-6 mb-2">Cool things</h2>
     <div class="grid grid-cols-2 grid-rows-1 gap-10 max-md:grid-cols-1">
       {
         pinnedItems.map((item) => (
