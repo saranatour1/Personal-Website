@@ -4,7 +4,7 @@ interface Props{
   className?:string;
   firstSection?:boolean;
 }
-const { className, firstSection=false} = Astro.props;
+const { className, firstSection=false } = Astro.props;
 ---
 <WobbleCard className={className} client:visible={!firstSection} client:idle={firstSection}>
   <slot />
