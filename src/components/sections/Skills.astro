@@ -1,18 +1,21 @@
 ---
 import CardWrapper from "../CardWrapper.astro";
 import { skillSet } from "../../consts";
+import { Card,CardTitle } from "../ui/AnimatedCard";
 ---
 <section class="flex justify-between items-center  max-md:flex-col  w-full max-w-[50rem] mt-4 ">
   <CardWrapper className="flex flex-col justify-start items-start flex-wrap">
-    <h2 class="text-2xl font-bold leading-6">Skills</h2>
-    <ul class="grid w-full grid-rows-4 grid-cols-4 gap-4 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:grid-rows-1">
-      {skillSet.map((item)=> 
-      <li class="p-4 flex justify-start items-center border border-blue-1/50 hover:border-blue-1 cursor-pointer rounded w-full">
-        <a href={item.link} class="flex items-center justify-between w-full"> 
-          <span>{item.name}</span>
-          <img width={24} height={24} src={item.icon} alt="" />
-          </a>
-        </li>)}
-    </ul>
+    <Card className="bg-transparent">
+      <CardTitle className="text-2xl font-bold leading-6">Skills</CardTitle>
+      <ul class="grid w-full grid-rows-4 grid-cols-4 gap-4 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:grid-rows-1">
+        {skillSet.map((item)=> 
+        <li class="p-4 flex justify-start items-center border border-blue-1/50 hover:border-blue-1 cursor-pointer rounded w-full">
+          <a href={item.url} class="flex items-center justify-between w-full"> 
+            <span>{item.name}</span>
+            <img width={24} height={24} src={item.icon} alt={item.name}/>
+            </a>
+          </li>)}
+      </ul>
+    </Card>
   </CardWrapper>
 </section>

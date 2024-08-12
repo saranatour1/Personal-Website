@@ -1,6 +1,11 @@
 ---
-const { className } = Astro.props;
+import { WobbleCard } from "./ui/WobbleCard";
+interface Props{
+  className?:string;
+  firstSection?:boolean;
+}
+const { className, firstSection=false} = Astro.props;
 ---
-<div class={`card w-full h-auto p-12 border border-blue-1 rounded-lg gap-y-2 items-start bg-slate-50/5 ${className}`}>
+<WobbleCard className={className} client:visible={!firstSection} client:idle={firstSection}>
   <slot />
-</div>
+</WobbleCard>
