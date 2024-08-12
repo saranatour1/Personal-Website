@@ -1,6 +1,50 @@
 ---
-
+import CardWrapper from "../CardWrapper.astro";
+import { Card,CardTitle, CardDescription } from "../ui/AnimatedCard";
+import Email from "../Icons/Email.astro"
 ---
-<div>
-  
+<div class="mt-4 w-full max-w-[50rem] ">
+  <CardWrapper className="">
+    <Card className="bg-transparent">
+      <CardTitle>
+        Professional experience
+      </CardTitle>
+      <CardDescription>
+        <div class="w-full">
+          <ul class="flex items-center justify-between contrast-50">
+            <li>
+              - Currently looking for work!
+            </li>
+            <li>
+              <time datetime="2024-04">April 2024</time> - Present 
+            </li>
+          </ul>
+          <p class="p-4 w-full max-w-full">
+           Cause looking for work is a full time job, I'm looking for work as a web developer anywhere in the world (Remotly or onsite), I would love to be able to travel the world next year and explore my potential in the outside world. 
+          <br/>
+          <span class="">
+            contact me on email 
+            <a href="mail:reach@sarantour.dev" class="hover:cursor-pointer flex items-center justify-normal">
+              reach@gmail.com
+              <Email />
+            </a>
+          </span>
+          </p>
+        </div>
+        <div>
+          <ul class="flex items-center justify-between contrast-50">
+            <li>
+              - Full stack developer <span class="text-[#e61b38]">@Storyme</span>
+            </li>
+            <li>
+              <time datetime="2023-10">October 2023</time> - <time datetime="2024-01">January 2024</time>
+            </li>
+          </ul>
+          <p class="p-4">
+            Worked with TypeScript and react on creating a Website builder
+          </p>
+        </div>
+      </CardDescription>
+    </Card>
+  </CardWrapper>
 </div>
