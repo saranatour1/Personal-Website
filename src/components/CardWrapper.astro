@@ -1,7 +1,11 @@
 ---
 import { WobbleCard } from "./ui/WobbleCard";
-const { className } = Astro.props;
+interface Props{
+  className?:string;
+  firstSection?:boolean;
+}
+const { className, firstSection=false} = Astro.props;
 ---
-<WobbleCard client:only="react" className={className}>
+<WobbleCard className={className} client:visible={!firstSection} client:idle={firstSection}>
   <slot />
 </WobbleCard>

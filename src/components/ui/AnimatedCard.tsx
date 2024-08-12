@@ -106,12 +106,15 @@ export const Card = ({
 export const CardTitle = ({
   children,
   className,
+  id
 }: {
   children: React.ReactNode;
   className?: string;
+  id?:string;
 }) => {
   return (
     <h3
+      id={id}
       className={cn(
         "text-lg font-semibold text-gray-800 py-2",
         className
