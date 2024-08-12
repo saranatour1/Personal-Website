@@ -1,7 +1,6 @@
-import { animate, motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import { animate } from "framer-motion";
+import React, { useEffect } from "react";
 import { cn } from "../../lib/utils";
-import { GoCopilot } from "react-icons/go";
 export const AnimatedCard = ()=>{
   return ( <Card>
     <CardSkeletonContainer>
