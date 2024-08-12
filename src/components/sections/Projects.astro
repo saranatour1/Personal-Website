@@ -43,6 +43,6 @@ const pinnedItems: ProjectType[] = (response as any).user.pinnedItems.nodes;
   {!pinnedItems && <span>loading</span>}
     <Card className="bg-transparent border-blue-1 p-8">
       <CardTitle className="text-2xl font-bold leading-6 ">Cool things</CardTitle>
-        <HoverEffect items={pinnedItems}/>
+        <HoverEffect client:visible items={pinnedItems}/>
     </Card>
 </section>
