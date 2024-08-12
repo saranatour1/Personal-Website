@@ -8,9 +8,9 @@ import { skillSet } from "../../consts";
     <ul class="grid w-full grid-rows-4 grid-cols-4 gap-4 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:grid-rows-1">
       {skillSet.map((item)=> 
       <li class="p-4 flex justify-start items-center border border-blue-1/50 hover:border-blue-1 cursor-pointer rounded w-full">
-        <a href={item.link} class="flex items-center justify-between w-full"> 
+        <a href={item.url} class="flex items-center justify-between w-full"> 
           <span>{item.name}</span>
-          <img width={24} height={24} src={item.icon} alt="" />
+          <img width={24} height={24} src={item.icon} alt={item.name}/>
           </a>
         </li>)}
     </ul>

@@ -1,6 +1,7 @@
 ---
+import { WobbleCard } from "./ui/WobbleCard";
 const { className } = Astro.props;
 ---
-<div class={`card w-full h-auto p-12 border border-blue-1 rounded-lg gap-y-2 items-start bg-slate-50/5 ${className}`}>
+<WobbleCard client:only="react" className={className}>
   <slot />
-</div>
+</WobbleCard>
