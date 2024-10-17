@@ -1,0 +1,46 @@
+---
+import CardWrapper from "../CardWrapper.astro";
+import { projectLinks } from "../../consts"
+import ExternalLink from "../Icons/ExternalLink.astro";
+import { Card, CardTitle, CardDescription } from "../ui/AnimatedCard";
+---
+<section class="flex justify-between items-center max-md:flex-col w-full max-w-[50rem] mt-4">
+  <CardWrapper className="flex justify-between items-center w-full max-md:flex-col">
+    <Card className="bg-transparent w-full h-full">
+      <CardTitle className="text-2xl">Some Links to my Projects</CardTitle>
+      <CardDescription>
+        <div class="flex flex-col items-center justify-center gap-6">
+          {projectLinks.map((project, index) => (
+            <Card className="flex bg-transparent border border-blue-1/50 hover:border-blue-1 p-4 rounded-md cursor-pointer">
+              <div class="flex flex-col items-start justify-normal w-full gap-2">
+              <div class="flex flex-col gap-2">
+                <CardTitle>{project.name}</CardTitle>
+                <CardDescription>{project.description}</CardDescription>
+              </div>
+              <div class="flex-grow">
+                <div class="flex flex-wrap gap-2">
+                  {project.tools.map((tool, toolIndex) => (
+                    <span class="bg-blue-1 text-white px-2 py-1 rounded-md">
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              </div>
+              <div class="flex justify-between items-center">
+                {project.upcoming ? (
+                  <span class="bg-blue-1 text-white px-2 py-1 rounded-md">Upcoming</span>
+                ) : (
+                  <a href={project.url} target="_blank" rel="noopener noreferrer">
+                    <span class="text-blue-1 sr-only">Visit Project</span>
+                    <ExternalLink class="ml-2 h-4 w-4" />
+                  </a>
+                )}
+              </div>
+            </Card>
+          ))}
+        </div>
+      </CardDescription>
+    </Card>
+  </CardWrapper>
+</section>
