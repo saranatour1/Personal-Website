@@ -62,10 +62,7 @@ const Skeleton = () => {
 
   useEffect(() => {
     // @ts-ignore
-    animate(sequence, {
-      duration: Infinity,
-      repeatDelay: 1,
-    });
+    animate(sequence);
   }, []);
   return (
     <div className="p-8 overflow-hidden h-full relative flex items-center justify-center">
