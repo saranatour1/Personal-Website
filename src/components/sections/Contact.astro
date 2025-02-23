@@ -1,0 +1,46 @@
+---
+import CardWrapper from "../CardWrapper.astro";
+import { Card, CardDescription, CardTitle } from "../ui/AnimatedCard";
+import { socialLinks } from "../../consts";
+import Github from "../Icons/Github.astro";
+import Email  from "../Icons/Email.astro";
+import LinkedIn from "../Icons/LinkedIn.astro";
+---
+<section class="w-full max-w-[50rem] mt-4">
+  <CardWrapper className="flex justify-between items-center w-full max-md:flex-col">
+  <Card className="bg-transparent">
+    <CardTitle> Contact information</CardTitle>
+    <CardDescription>
+      <div class="w-full flex flex-col items-start space-y-2">
+        {socialLinks.map((link) => {
+          let label, Icon;
+      
+          if (link.includes("github")) {
+            label = "Follow me on GitHub";
+            Icon = <Github />;
+          } else if (link.includes("linkedin")) {
+            label = "Follow me on LinkedIn";
+            Icon = <LinkedIn />;
+          } else if (link.includes("@")) {
+            label = "Email me";
+            Icon = <Email />;
+          }
+      
+          return (
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex flex-row-reverse items-center space-x-2 text-gray-700 hover:text-blue-1 transition"
+            >
+              <span>{label}</span>
+              {Icon}
+            </a>
+          );
+        })}
+      </div>
+      
+    </CardDescription>
+  </Card>
+  </CardWrapper>
+</section>

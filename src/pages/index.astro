@@ -5,14 +5,16 @@ import Projects from "../components/sections/Projects.astro";
 import Skills from "../components/sections/Skills.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Layout from "../layouts/Layout.astro";
-import ProffesionalExperience from "../components/sections/ProfessionalExperience.astro"
+import ProfessionalExperience from "../components/sections/ProfessionalExperience.astro"
 import ProjectLinks from "../components/sections/ProjectLinks.astro"
+import Contact from "../components/sections/Contact.astro";
 ---
 <Layout title={SITE_TITLE} descreption={SITE_DESCRIPTION}>
   <main>
     <FirstSection />
     <OverView />
-    <ProffesionalExperience />
+    <Contact />
+    <ProfessionalExperience />
     <Skills />
     <Projects />
     <ProjectLinks />
