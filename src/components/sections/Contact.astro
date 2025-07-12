@@ -6,7 +6,7 @@ import Github from "../Icons/Github.astro";
 import Email  from "../Icons/Email.astro";
 import LinkedIn from "../Icons/LinkedIn.astro";
 ---
-<section class="w-full max-w-[50rem] mt-4">
+<section class="w-full max-w-200 mt-4">
   <CardWrapper className="flex justify-between items-center w-full max-md:flex-col">
   <Card className="bg-transparent">
     <CardTitle> Contact information</CardTitle>
@@ -14,7 +14,7 @@ import LinkedIn from "../Icons/LinkedIn.astro";
       <div class="w-full flex flex-col items-start space-y-2">
         {socialLinks.map((link) => {
           let label, Icon;
-      
+          if(!link) return null
           if (link.includes("github")) {
             label = "Follow me on GitHub";
             Icon = <Github />;

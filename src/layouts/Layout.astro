@@ -4,12 +4,12 @@ import Footer from "../components/Footer.astro";
 import NavBar from "../components/NavBar.astro";
 import "../styles/globals.css";
 import "../styles/styles.css"
-const { title, descreption, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <html lang="en">
   <head>
-    <BaseHead title={title} description={descreption} />
+    <BaseHead title={title} description={description} />
   </head>
   <body class="w-full h-full min-h-screen max-w-full flex flex-col justify-start items-center pt-10 max-sm:px-4 px-32 max-sm:pt-20 font-recoleta bg-white-1 pb-10">
     <NavBar />

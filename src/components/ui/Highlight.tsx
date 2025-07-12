@@ -28,7 +28,7 @@ export const HeroHighlight = ({
   return (
     <div
       className={cn(
-        "relative h-[40rem] flex items-center bg-white  justify-center w-full group",
+        "relative h-160 flex items-center bg-white  justify-center w-full group",
         containerClassName
       )}
       onMouseMove={handleMouseMove}
@@ -85,7 +85,7 @@ export const Highlight = ({
         display: "inline",
       }}
       className={cn(
-        `relative inline-block pb-1   px-1 rounded-lg bg-gradient-to-r from-indigo-300 to-purple-300`,
+        `relative inline-block pb-1   px-1 rounded-lg bg-linear-to-r from-indigo-300 to-purple-300`,
         className
       )}
     >

@@ -1,7 +1,8 @@
 {
-  "name": "second-star",
+  "name": "personal-website",
   "type": "module",
-  "version": "0.0.1",
+  "author": "@saranatour1",
+  "version": "0.2.0",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,17 +11,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.4.1",
-    "@astrojs/mdx": "^2.3.1",
-    "@astrojs/react": "^3.6.2",
-    "@astrojs/rss": "^4.0.9",
-    "@astrojs/sitemap": "^3.2.1",
-    "@astrojs/tailwind": "^5.1.2",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/react": "^4.3.0",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.4.1",
+    "@astrojs/tailwind": "^6.0.2",
     "@octokit/core": "^6.1.2",
     "@octokit/types": "^13.6.1",
+    "@tailwindcss/vite": "^4.1.11",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
-    "astro": "^4.16.5",
+    "astro": "^5.11.0",
     "astro-robots": "^2.0.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.9",
@@ -28,8 +30,8 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss": "^3.4.14",
+    "tailwindcss": "^4.1.11",
     "typescript": "^5.6.3"
   },
-  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
+  "packageManager": "pnpm@10.13.1"
 }

@@ -4,7 +4,7 @@ import { projectLinks } from "../../consts"
 import ExternalLink from "../Icons/ExternalLink.astro";
 import { Card, CardTitle, CardDescription } from "../ui/AnimatedCard";
 ---
-<section class="flex justify-between items-center max-md:flex-col w-full max-w-[50rem] mt-4">
+<section class="flex justify-between items-center max-md:flex-col w-full max-w-200 mt-4">
   <CardWrapper className="flex justify-between items-center w-full max-md:flex-col">
     <Card className="bg-transparent w-full h-full">
       <CardTitle className="text-2xl">Some Links to my Projects</CardTitle>
@@ -17,7 +17,7 @@ import { Card, CardTitle, CardDescription } from "../ui/AnimatedCard";
                 <CardTitle>{project.name}</CardTitle>
                 <CardDescription>{project.description}</CardDescription>
               </div>
-              <div class="flex-grow">
+              <div class="grow">
                 <div class="flex flex-wrap gap-2">
                   {project.tools.map((tool, toolIndex) => (
                     <span class="bg-blue-1 text-white px-2 py-1 rounded-md">
