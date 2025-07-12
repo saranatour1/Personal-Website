@@ -1,7 +1,20 @@
 ---
-const routes = [['home','/'],['services',`${import.meta.env.PUBLIC_EMAIL}`]];
+const routes = [
+  ["home", "/"],
+  ["services", `${import.meta.env.PUBLIC_EMAIL}`],
+];
 const currentPath = Astro.url.pathname;
 ---
+
 <nav class="flex justify-start items-center gap-x-4 my-4 w-full max-w-200">
-  {routes.map(([route,link])=><a class={`hover:text-blue-1 hover:-translate-y-0.5 transition-colors ${currentPath === link ? 'text-blue-1':''}`} href={link}>{route}</a>)}
+  {
+    routes.map(([route, link]) => (
+      <a
+        class={`hover:text-blue-1 hover:-translate-y-0.5 transition-colors ${currentPath === link ? "text-blue-1" : ""}`}
+        href={link}
+      >
+        {route}
+      </a>
+    ))
+  }
 </nav>

@@ -9,10 +9,10 @@ const today = new Date();
 	 Copyright {today.getFullYear()}. Made by Sara
 	<div class="social-links" >
 		{socialLinks.map(link =>(
-			<a href={link} target="_blank" class=" cursor-pointer">
-				{link.includes('github') && (<span class="sr-only">Follow me on github</span> <Github />)}
-				{link.includes('linkedin') && (<span class="sr-only">Follow me on linkedin</span> <LinkedIn />)}
-				{link.includes('@') && (<span class="sr-only">Email me </span> <Email />)}
+			link && <a href={link} target="_blank" class=" cursor-pointer">
+				{link?.includes('github') && (<span class="sr-only">Follow me on github</span> <Github />)}
+				{link?.includes('linkedin') && (<span class="sr-only">Follow me on linkedin</span> <LinkedIn />)}
+				{link?.includes('@') && (<span class="sr-only">Email me </span> <Email />)}
 		</a>
 		))}
 	</div>

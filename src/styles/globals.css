@@ -1,0 +1,19 @@
+@import "tailwindcss";
+/* copied from right over here -> https://codepen.io/Juxtopposed/pen/BaqLEQY  */
+/* :root {
+  --bg: #F0DBA5;
+  --text: #151515;
+  --yellow: #EDB74D;
+  --red: #EB6666;
+  --green: #6FB18A;
+  --blue:#8dcbfd;
+} */
+
+@theme {
+  --color-white-1: #fcf8ef;
+  --color-black-1: #1a1a1a;
+  --color-blue-1: #2a9d8f;
+  --font-recoleta: 'Recoleta';
+}
+
+

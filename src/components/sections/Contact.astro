@@ -14,7 +14,7 @@ import LinkedIn from "../Icons/LinkedIn.astro";
       <div class="w-full flex flex-col items-start space-y-2">
         {socialLinks.map((link) => {
           let label, Icon;
-      
+          if(!link) return null
           if (link.includes("github")) {
             label = "Follow me on GitHub";
             Icon = <Github />;

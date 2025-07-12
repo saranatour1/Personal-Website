@@ -8,5 +8,9 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://saranatour.dev/',
-  integrations: [mdx(), sitemap(), tailwindcss(), robots(), react()]
+  integrations: [mdx(), sitemap(), tailwindcss(), robots(), react()],
+
+  vite: {
+    plugins: [tailwindcss()]
+  }
 });
