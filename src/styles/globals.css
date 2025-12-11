@@ -11,19 +11,19 @@
 /* Please note that after this line, it was generated with AI, and not actually written by a human */
 /* Custom utilities / extended utilities */
 @layer utilities {
-  .bg-white-1 { background-color: var(--color-white-1) !important; }
-  .bg-black-1 { background-color: var(--color-black-1) !important; }
-  .bg-blue-1  { background-color: var(--color-blue-1) !important; }
+  .bg-white-1 { background-color: var(--color-white-1); }
+  .bg-black-1 { background-color: var(--color-black-1); }
+  .bg-blue-1  { background-color: var(--color-blue-1); }
 
-  .text-white-1 { color: var(--color-white-1) !important; }
-  .text-black-1 { color: var(--color-black-1) !important; }
-  .text-blue-1  { color: var(--color-blue-1) !important; }
+  .text-white-1 { color: var(--color-white-1); }
+  .text-black-1 { color: var(--color-black-1); }
+  .text-blue-1  { color: var(--color-blue-1); }
 
-  .font-recoleta { font-family: var(--font-recoleta) !important; }
+  .font-recoleta { font-family: var(--font-recoleta); }
 
   /* Example for backgroundImage placeholder (static) */
   .bg-blog-placeholder-5 {
-    background-image: url("/public/blog-placeholder-5.jpg");
+    background-image: url("/blog-placeholder-5.jpg");
   }
 
   /* Custom animation */
