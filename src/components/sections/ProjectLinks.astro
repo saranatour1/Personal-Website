@@ -10,7 +10,7 @@ import { Card, CardTitle, CardDescription } from "../ui/AnimatedCard";
       <CardTitle className="text-2xl">Some Links to my Projects</CardTitle>
       <CardDescription>
         <div class="flex flex-col items-center justify-center gap-6">
-          {projectLinks.map((project, index) => (
+          {projectLinks.map((project) => (
             <Card className="flex bg-transparent border border-blue-1/50 hover:border-blue-1 p-4 rounded-md cursor-pointer">
               <div class="flex flex-col items-start justify-normal w-full gap-2">
               <div class="flex flex-col gap-2">
@@ -19,7 +19,7 @@ import { Card, CardTitle, CardDescription } from "../ui/AnimatedCard";
               </div>
               <div class="grow">
                 <div class="flex flex-wrap gap-2">
-                  {project.tools.map((tool, toolIndex) => (
+                  {project.tools.map((tool) => (
                     <span class="bg-blue-1 text-white px-2 py-1 rounded-md">
                       {tool}
                     </span>

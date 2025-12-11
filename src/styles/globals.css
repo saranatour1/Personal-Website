@@ -1,13 +1,5 @@
 @import "tailwindcss";
-/* copied from right over here -> https://codepen.io/Juxtopposed/pen/BaqLEQY  */
-/* :root {
-  --bg: #F0DBA5;
-  --text: #151515;
-  --yellow: #EDB74D;
-  --red: #EB6666;
-  --green: #6FB18A;
-  --blue:#8dcbfd;
-} */
+@plugin '@tailwindcss/typography';
 
 @theme {
   --color-white-1: #fcf8ef;
@@ -16,4 +8,32 @@
   --font-recoleta: 'Recoleta';
 }
 
+/* Please note that after this line, it was generated with AI, and not actually written by a human */
+/* Custom utilities / extended utilities */
+@layer utilities {
+  .bg-white-1 { background-color: var(--color-white-1); }
+  .bg-black-1 { background-color: var(--color-black-1); }
+  .bg-blue-1  { background-color: var(--color-blue-1); }
 
+  .text-white-1 { color: var(--color-white-1); }
+  .text-black-1 { color: var(--color-black-1); }
+  .text-blue-1  { color: var(--color-blue-1); }
+
+  .font-recoleta { font-family: var(--font-recoleta); }
+
+  /* Example for backgroundImage placeholder (static) */
+  .bg-blog-placeholder-5 {
+    background-image: url("/blog-placeholder-5.jpg");
+  }
+
+  /* Custom animation */
+  .animate-move {
+    animation: move 5s linear infinite;
+  }
+}
+
+/* Keyframes */
+@keyframes move {
+  0%   { transform: translateX(-200px); }
+  100% { transform: translateX(200px); }
+}

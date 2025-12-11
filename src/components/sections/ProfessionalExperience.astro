@@ -1,9 +1,6 @@
 ---
 import CardWrapper from "../CardWrapper.astro";
 import { Card,CardTitle, CardDescription } from "../ui/AnimatedCard";
-import Email from "../Icons/Email.astro"
-console.log("updated on sept 15th")
-console.log("still unemployed")
 ---
 <div class="mt-4 w-full max-w-200 ">
   <CardWrapper className="">
@@ -12,27 +9,30 @@ console.log("still unemployed")
         Professional experience
       </CardTitle>
       <CardDescription>
+                <div class="w-full">
+          <ul class="flex items-center justify-between contrast-50">
+            <li>
+              - Independent Contractor
+            </li>
+            <li>
+              <time datetime="2024-04">April 2024</time> - Present
+            </li>
+          </ul>
+          <p class="p-4 w-full max-w-full">
+            Torolololo
+          </p>
+        </div>
         <div class="w-full">
           <ul class="flex items-center justify-between contrast-50">
             <li>
               - Career Break (Job Hunting)
             </li>
             <li>
-              <time datetime="2025-02">February 2025</time> - Present updated on Sept 15th
+             <time datetime="2025-02">February 2025</time> - <time datetime="2025-11">November 2025</time>
             </li>
           </ul>
           <p class="p-4 w-full max-w-full">
-            You've all probably read this before, Job Hunting breaks you to 5 pieces, puts you back together and breaks you again and again. 
-            <br />
-            Help me get Hired in Germany!
-          <br/>
-          <span class="">
-            contact me on email 
-            <a href="mail:reach@sarantour.dev" class="hover:cursor-pointer flex items-center justify-normal">
-              reach@saranatour.dev
-              <Email />
-            </a>
-          </span>
+            Relocation and exploring work ventures, traveled above and beyond in Germany.
           </p>
         </div>
         <div>

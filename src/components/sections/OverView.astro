@@ -1,18 +1,37 @@
 ---
 import CardWrapper from "../CardWrapper.astro";
-import { Card, CardSkeletonContainer, CardTitle, CardDescription } from "../ui/AnimatedCard";
+import {
+  Card,
+  CardTitle,
+  CardDescription,
+} from "../ui/AnimatedCard";
 ---
 
-<div class="flex justify-between items-center  max-md:flex-col w-full max-w-200 mt-4">
+<div
+  class="flex justify-between items-center max-md:flex-col w-full max-w-200 mt-4"
+>
   <CardWrapper>
     <Card className=" bg-transparent w-full h-full">
       <CardTitle className={`text-2xl`}> About Me </CardTitle>
-      <CardDescription>
-        I'm a web developer with an electrical engineering background. I enjoy building things on both the front and
-        back ends, taking on challenges, and turning my ideas into real projects, whether they're small or big. Even
-        though I've been in the industry for a short time, I've learned a lot and created some cool stuff. I like
-        working with JavaScript frameworks like Vue and Astro, but I'm open to trying out different technologies. I'm a
-        quick learner and always curious to learn more and get involved in projects.
+      <CardDescription class:list={['prose', 'text-sm', 'prose-neutral', 'leading-relaxed', 'max-w-none']}>
+        <p>
+          I am a Full-Stack Developer with over 2 years of experience in TypeScript and JavaScript frameworks. My curiosity drives me to learn anything with a quick Google search.
+        </p>
+        <p>
+          Currently, I’m exploring freelancing projects, mainly working with React and Convex to help clients grow their businesses efficiently. Feel free to <a href="mailto:reach@saranatour.dev">contact me</a> to check my schedule or set up a meeting!
+        </p>
+        <p>
+          I thrive in remote environments that offer flexibility and autonomy. I prefer modern workplaces with clear goals from day one, rather than traditional corporate settings.
+        </p>
+        <p>
+          By profession, I’m also an Electrical Engineer. I enjoy designing small homes—like container homes, <a href="https://bunkielife.com/">bunkie life</a>, and triangular homes—and have a passion for backpacks (I own about 10–20!).
+        </p>
+        <p>
+          I spent 2025 in Germany and I am considering relocating to somewhere safe. We've all got dreams and mine are simple, staying healthy and learning to improve the quality of life.
+        </p>
+        <p>
+          Tech I’ve worked with: Next.js, Astro.js, Tanstack Start, Drizzle, Postgres, Docker, Turbo Repo, and more.
+        </p>
       </CardDescription>
     </Card>
   </CardWrapper>

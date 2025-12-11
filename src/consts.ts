@@ -130,10 +130,17 @@ export const projectLinks = [
     upcoming: false,
   },
   {
-    name: "link shortner app",
-    description: "A link shortner app built with NextJS and Convex",
+    name: "Personal Job Application tracker (for the Applicant)",
+    description: "No more excuses, This is an actual Personal job tracker that pays off, and is completely free, self-hosted.",
     url: null,
-    tools: ["NextJS", "Convex", "TailwindCSS", "shadcn UI"],
+    tools: ["Tanstack Start", "Convex", "Firecrawl", "Agent"],
+    upcoming: true,
+  },
+  {
+    name: "link shortener app",
+    description: "A link shortener app built with NextJS and Convex",
+    url: null,
+    tools: ["Tanstack start", "Convex"],
     upcoming: true,
   },
   {
@@ -162,13 +169,6 @@ export const projectLinks = [
     description: "A preview card built with kaioken",
     url: "https://preview-card-uzhw.vercel.app/",
     tools: ["kaioken", "tailwindcss"],
-    upcoming: false,
-  },
-  {
-    name: "unprofessional ",
-    url: "https://unprofessional.saranatour.dev/",
-    description: "A unprofessional website built with astro",
-    tools: ["astro", "tailwindcss"],
     upcoming: false,
   },
   {
