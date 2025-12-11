@@ -37,15 +37,3 @@
   0%   { transform: translateX(-200px); }
   100% { transform: translateX(200px); }
 }
-
-/* Custom utilities for SVG-generated patterns */
-/* Because Tailwind v4 drops the JS-style plugin system, dynamic generation like svgToDataUri
-   isn’t straightforward in pure CSS. You’ll need to pre-generate the data-URIs and embed them manually. */
-
-/* Example (you’d need to compute the data URI in advance) */
-/*
-.bg-grid-custom {
-  background-image: url("data:image/svg+xml;base64,...");
-}
-*/
-
